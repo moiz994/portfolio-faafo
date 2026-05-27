@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BenchPrep — Moiz Alam</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../styles.css" />
+  <link rel="stylesheet" href="project.css" />
+</head>
+<body>
+
+  <nav class="navbar">
+    <a href="../index.html" class="nav-logo">Moiz Alam</a>
+    <div class="nav-right">
+      <a href="../index.html#gallery" class="nav-back">← All Projects</a>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+        <div class="toggle-icon-wrap">
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5" fill="currentColor" stroke="none"/>
+            <line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/>
+            <line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/>
+            <line x1="5.64" y1="5.64" x2="4.22" y2="4.22"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+            <line x1="5.64" y1="18.36" x2="4.22" y2="19.78"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+          </svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" fill="currentColor" stroke="none"/>
+          </svg>
+        </div>
+      </button>
+    </div>
+  </nav>
+
+  <section class="proj-hero">
+    <div class="proj-meta">
+      <span class="wtag blue">AI · B2B SaaS</span>
+      <span class="wtag">Arbisoft</span>
+      <span class="wtag">2025</span>
+    </div>
+    <h1 class="proj-title">BenchPrep</h1>
+    <p class="proj-tagline">An LLM-based interview generation and scoring platform — from zero to beta in 14 weeks.</p>
+  </section>
+
+  <div class="proj-hero-img">
+    <img src="https://images.unsplash.com/photo-1571171637578-41bc2dd41cd2?w=1400&q=80&auto=format&fit=crop" alt="BenchPrep"/>
+  </div>
+
+  <section class="proj-metrics">
+    <div class="metrics-row">
+      <div class="metric"><span class="metric-val">14 wks</span><span class="metric-label">0 to beta</span></div>
+      <div class="metric"><span class="metric-val">AI-native</span><span class="metric-label">Architecture</span></div>
+      <div class="metric"><span class="metric-val">3</span><span class="metric-label">LLM iteration cycles</span></div>
+      <div class="metric"><span class="metric-val">B2B SaaS</span><span class="metric-label">Product type</span></div>
+    </div>
+  </section>
+
+  <section class="proj-body">
+    <div class="proj-sections">
+
+      <div class="proj-section">
+        <span class="proj-section-label">The Challenge</span>
+        <div class="proj-section-text">
+          <p>Hiring teams struggle to evaluate candidates consistently at scale. Structured interviews take time, require trained interviewers, and still produce subjective results. The question Arbisoft wanted to answer: could an AI system generate high-quality, role-specific interview questions and score responses reliably enough to be trusted by hiring teams?</p>
+          <p>The challenge wasn't just technical. It was also about defining what "reliable" meant — what level of AI evaluation quality would earn trust from recruiters, and what the minimum viable product needed to look like to test that assumption without over-building.</p>
+        </div>
+      </div>
+
+      <div class="proj-section">
+        <span class="proj-section-label">Approach</span>
+        <div class="proj-section-text">
+          <p>I defined the MVP scope with a tight constraint: prove that AI-generated questions and scoring could hold up in a real interview context before adding any workflow features. This meant choosing the right LLM evaluation criteria early, and building a feedback loop between the AI output and interviewer judgment.</p>
+          <p>Prompt engineering became a core product discipline — not a one-time setup. I ran <em>3 structured iteration cycles</em> on the scoring prompts, each informed by structured feedback from pilot interviewers. Every iteration had a clear hypothesis, a defined test, and a specific outcome threshold.</p>
+          <p>On the delivery side, I coordinated the engineering team in two-week sprints, keeping scope contained so we didn't chase features before the core reliability was proven.</p>
+        </div>
+      </div>
+
+      <div class="proj-section">
+        <span class="proj-section-label">Outcome</span>
+        <div class="proj-section-text">
+          <p>BenchPrep shipped to beta in <em>14 weeks</em> — a full AI-native interview pipeline covering question generation, candidate response capture, and LLM-based scoring with interviewer override.</p>
+          <p>Beta feedback confirmed that the scoring reliability was high enough for hiring teams to trust as a first-pass filter, which was the key validation gate we needed. The product is now in active use with pilot clients and moving toward general availability.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="proj-shots">
+    <div class="shots-label">Visuals</div>
+    <div class="shots-grid">
+      <div class="shot"><img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&q=80&auto=format&fit=crop" alt="Interview session" loading="lazy"/></div>
+      <div class="shot"><img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&q=80&auto=format&fit=crop" alt="Video interview" loading="lazy"/></div>
+    </div>
+  </section>
+
+  <section class="proj-next-nav">
+    <a class="proj-next-link" href="edx-mobile.html">
+      <span class="proj-next-eyebrow">Next Project</span>
+      <span class="proj-next-name">edX Mobile Rewrite →</span>
+    </a>
+  </section>
+
+  <footer class="footer">
+    <span>Moiz Alam</span><span>·</span><span>Senior Product Manager</span><span>·</span><span>Sydney</span>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+</html>

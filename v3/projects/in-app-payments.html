@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>In-App Payments — Moiz Alam</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../styles.css" />
+  <link rel="stylesheet" href="project.css" />
+</head>
+<body>
+
+  <nav class="navbar">
+    <a href="../index.html" class="nav-logo">Moiz Alam</a>
+    <div class="nav-right">
+      <a href="../index.html#gallery" class="nav-back">← All Projects</a>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+        <div class="toggle-icon-wrap">
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5" fill="currentColor" stroke="none"/>
+            <line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/>
+            <line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/>
+            <line x1="5.64" y1="5.64" x2="4.22" y2="4.22"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+            <line x1="5.64" y1="18.36" x2="4.22" y2="19.78"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+          </svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" fill="currentColor" stroke="none"/>
+          </svg>
+        </div>
+      </button>
+    </div>
+  </nav>
+
+  <section class="proj-hero">
+    <div class="proj-meta">
+      <span class="wtag yellow">Monetisation</span>
+      <span class="wtag">edX.org</span>
+      <span class="wtag">2023</span>
+    </div>
+    <h1 class="proj-title">In-App<br>Payments</h1>
+    <p class="proj-tagline">Google Pay and Apple Pay launched across 3,000+ courses — generating $700K+ in new revenue in year one.</p>
+  </section>
+
+  <div class="proj-hero-img">
+    <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=1400&q=80&auto=format&fit=crop" alt="In-App Payments"/>
+  </div>
+
+  <section class="proj-metrics">
+    <div class="metrics-row">
+      <div class="metric"><span class="metric-val">$700K+</span><span class="metric-label">Revenue, year one</span></div>
+      <div class="metric"><span class="metric-val">3,000+</span><span class="metric-label">Courses enabled</span></div>
+      <div class="metric"><span class="metric-val">2</span><span class="metric-label">Payment methods (GPay + APay)</span></div>
+      <div class="metric"><span class="metric-val">Net-new</span><span class="metric-label">Revenue stream</span></div>
+    </div>
+  </section>
+
+  <section class="proj-body">
+    <div class="proj-sections">
+
+      <div class="proj-section">
+        <span class="proj-section-label">The Challenge</span>
+        <div class="proj-section-text">
+          <p>Mobile learners on edX couldn't complete a course purchase inside the app. They had to drop out to a browser, authenticate again, and complete a multi-step web checkout — a friction-heavy flow that was losing conversions at scale. With millions of mobile users, the gap between mobile traffic and mobile revenue was significant.</p>
+          <p>The opportunity was clear: bring the purchase experience natively into the app, and reduce the steps between intent and payment to as few taps as possible.</p>
+        </div>
+      </div>
+
+      <div class="proj-section">
+        <span class="proj-section-label">Approach</span>
+        <div class="proj-section-text">
+          <p>I led the product definition for both the iOS (Apple Pay) and Android (Google Pay) implementations in parallel. This meant working across three teams: mobile engineering, payments infrastructure, and the edX commerce platform — each with its own constraints, timelines, and approval requirements from Apple and Google.</p>
+          <p>Platform review requirements were the trickiest constraint. Both stores have specific rules around in-app purchasing flows for digital content. I mapped out the compliance requirements early and built them into the spec, so engineering wasn't discovering edge cases mid-build.</p>
+          <p>I also worked with the data team to define conversion tracking from the start — we needed to be able to attribute revenue correctly from day one, not retrofit analytics after launch.</p>
+        </div>
+      </div>
+
+      <div class="proj-section">
+        <span class="proj-section-label">Outcome</span>
+        <div class="proj-section-text">
+          <p>In-app payments launched across <em>3,000+ courses</em> on both platforms. The new revenue stream generated over <em>$700,000 in its first year</em> — money that wouldn't have existed without removing the mobile checkout friction.</p>
+          <p>It was a clean example of a product change where the outcome was fully measurable: we opened a revenue channel that previously didn't exist, and the number speaks for itself.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="proj-shots">
+    <div class="shots-label">Visuals</div>
+    <div class="shots-grid">
+      <div class="shot"><img src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800&q=80&auto=format&fit=crop" alt="Checkout flow" loading="lazy"/></div>
+      <div class="shot"><img src="https://images.unsplash.com/photo-1580048915913-4f8f5cb481c4?w=800&q=80&auto=format&fit=crop" alt="Payment" loading="lazy"/></div>
+    </div>
+  </section>
+
+  <section class="proj-next-nav">
+    <a class="proj-next-link" href="interiors-source.html">
+      <span class="proj-next-eyebrow">Next Project</span>
+      <span class="proj-next-name">Interiors Source →</span>
+    </a>
+  </section>
+
+  <footer class="footer">
+    <span>Moiz Alam</span><span>·</span><span>Senior Product Manager</span><span>·</span><span>Sydney</span>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+</html>

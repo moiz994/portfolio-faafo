@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>edX Mobile Rewrite — Moiz Alam</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../styles.css" />
+  <link rel="stylesheet" href="project.css" />
+</head>
+<body>
+
+  <nav class="navbar">
+    <a href="../index.html" class="nav-logo">Moiz Alam</a>
+    <div class="nav-right">
+      <a href="../index.html#gallery" class="nav-back">← All Projects</a>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+        <div class="toggle-icon-wrap">
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5" fill="currentColor" stroke="none"/>
+            <line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/>
+            <line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/>
+            <line x1="5.64" y1="5.64" x2="4.22" y2="4.22"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+            <line x1="5.64" y1="18.36" x2="4.22" y2="19.78"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+          </svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" fill="currentColor" stroke="none"/>
+          </svg>
+        </div>
+      </button>
+    </div>
+  </nav>
+
+  <section class="proj-hero">
+    <div class="proj-meta">
+      <span class="wtag red">Mobile · EdTech</span>
+      <span class="wtag">edX.org</span>
+      <span class="wtag">2022–2023</span>
+    </div>
+    <h1 class="proj-title">edX Mobile<br>Rewrite</h1>
+    <p class="proj-tagline">A full iOS and Android rewrite shipped to production in under 4 months — with cross-functional remote teams across time zones.</p>
+  </section>
+
+  <div class="proj-hero-img">
+    <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=1400&q=80&auto=format&fit=crop" alt="edX Mobile"/>
+  </div>
+
+  <section class="proj-metrics">
+    <div class="metrics-row">
+      <div class="metric"><span class="metric-val">&lt; 4 mo</span><span class="metric-label">0 to production</span></div>
+      <div class="metric"><span class="metric-val">2</span><span class="metric-label">Platforms (iOS + Android)</span></div>
+      <div class="metric"><span class="metric-val">Remote</span><span class="metric-label">Cross-functional teams</span></div>
+      <div class="metric"><span class="metric-val">Global</span><span class="metric-label">User base</span></div>
+    </div>
+  </section>
+
+  <section class="proj-body">
+    <div class="proj-sections">
+
+      <div class="proj-section">
+        <span class="proj-section-label">The Challenge</span>
+        <div class="proj-section-text">
+          <p>The legacy edX mobile apps had accumulated years of technical debt. Performance was poor, crash rates were high, and the codebase made new feature development painfully slow. The decision was made to do a full rewrite on both platforms simultaneously — not a migration, not a refactor, but a clean-sheet rebuild.</p>
+          <p>The complexity wasn't just technical. The team spanned multiple time zones and disciplines — iOS, Android, backend, design, QA — and edX's global learner base meant there was no room for a rough launch. The product had to ship right, and it had to ship fast.</p>
+        </div>
+      </div>
+
+      <div class="proj-section">
+        <span class="proj-section-label">Approach</span>
+        <div class="proj-section-text">
+          <p>I owned the product side end-to-end: scope definition, delivery coordination, and stakeholder alignment across the org. The first priority was ruthless scoping — identifying what had to be in the rewrite versus what could follow in subsequent releases. Every feature request was weighed against the 4-month delivery constraint.</p>
+          <p>Remote team alignment was the biggest operational challenge. I ran a tight async-first process: clear written specs, daily async standups, and weekly sync check-ins timed to overlap across time zones. Decisions were documented, blockers surfaced fast.</p>
+          <p>I worked closely with engineering leads to front-load technical risk — anything uncertain went into early sprints so we weren't discovering hard problems in the final weeks.</p>
+        </div>
+      </div>
+
+      <div class="proj-section">
+        <span class="proj-section-label">Outcome</span>
+        <div class="proj-section-text">
+          <p>Both apps shipped to production <em>in under 4 months</em>. The rewrite delivered measurably better performance, lower crash rates, and a significantly cleaner codebase that reduced future development cycles.</p>
+          <p>The project was a proof point for what disciplined remote delivery looks like at scale — and it set the template for how Arbisoft's mobile teams approached complex multi-platform builds going forward.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="proj-shots">
+    <div class="shots-label">Visuals</div>
+    <div class="shots-grid">
+      <div class="shot"><img src="https://images.unsplash.com/photo-1580910051074-3eb694886505?w=800&q=80&auto=format&fit=crop" alt="Mobile screen" loading="lazy"/></div>
+      <div class="shot"><img src="https://images.unsplash.com/photo-1522199755839-a2bacb67c546?w=800&q=80&auto=format&fit=crop" alt="Using mobile" loading="lazy"/></div>
+    </div>
+  </section>
+
+  <section class="proj-next-nav">
+    <a class="proj-next-link" href="in-app-payments.html">
+      <span class="proj-next-eyebrow">Next Project</span>
+      <span class="proj-next-name">In-App Payments →</span>
+    </a>
+  </section>
+
+  <footer class="footer">
+    <span>Moiz Alam</span><span>·</span><span>Senior Product Manager</span><span>·</span><span>Sydney</span>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sigmal — Moiz Alam</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../styles.css" />
+  <link rel="stylesheet" href="project.css" />
+</head>
+<body>
+
+  <nav class="navbar">
+    <a href="../index.html" class="nav-logo">Moiz Alam</a>
+    <div class="nav-right">
+      <a href="../index.html#gallery" class="nav-back">← All Projects</a>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+        <div class="toggle-icon-wrap">
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5" fill="currentColor" stroke="none"/>
+            <line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/>
+            <line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/>
+            <line x1="5.64" y1="5.64" x2="4.22" y2="4.22"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+            <line x1="5.64" y1="18.36" x2="4.22" y2="19.78"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+          </svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" fill="currentColor" stroke="none"/>
+          </svg>
+        </div>
+      </button>
+    </div>
+  </nav>
+
+  <section class="proj-hero">
+    <div class="proj-meta">
+      <span class="wtag blue">AI · SaaS</span>
+      <span class="wtag">Arbisoft</span>
+      <span class="wtag">2024</span>
+    </div>
+    <h1 class="proj-title">Sigmal</h1>
+    <p class="proj-tagline">An AI-powered competitive intelligence platform — feasibility assessment to inform a critical build/no-build decision.</p>
+  </section>
+
+  <div class="proj-hero-img">
+    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1400&q=80&auto=format&fit=crop" alt="Sigmal"/>
+  </div>
+
+  <section class="proj-metrics">
+    <div class="metrics-row">
+      <div class="metric"><span class="metric-val">Feasibility</span><span class="metric-label">Project phase</span></div>
+      <div class="metric"><span class="metric-val">AI SaaS</span><span class="metric-label">Product category</span></div>
+      <div class="metric"><span class="metric-val">B/NB</span><span class="metric-label">Build / No-build decision</span></div>
+      <div class="metric"><span class="metric-val">Comp Intel</span><span class="metric-label">Domain</span></div>
+    </div>
+  </section>
+
+  <section class="proj-body">
+    <div class="proj-sections">
+
+      <div class="proj-section">
+        <span class="proj-section-label">The Challenge</span>
+        <div class="proj-section-text">
+          <p>Competitive intelligence is a problem every business has, but few solve well. Teams either pay for expensive enterprise tools, rely on ad hoc manual research, or simply don't do it consistently. The question Arbisoft was exploring: could an AI-powered platform make competitive intelligence accessible and continuous for mid-market companies?</p>
+          <p>Before committing engineering resources, the team needed a clear answer to: is this market real, is the AI capability mature enough to deliver genuine value, and can we find a wedge that large incumbents haven't closed? My job was to produce that answer rigorously.</p>
+        </div>
+      </div>
+
+      <div class="proj-section">
+        <span class="proj-section-label">Approach</span>
+        <div class="proj-section-text">
+          <p>I structured the feasibility assessment around three questions: market viability, technical feasibility, and competitive differentiation. Each had a clear evidence bar — not "could this exist" but "should we specifically build this, given what we know and what we can do."</p>
+          <p>I mapped the competitive landscape in depth — understanding not just who the players were, but where they were weak, what jobs-to-be-done they under-served, and what a credible wedge for a new entrant looked like. I also assessed the current state of LLM capabilities against the specific tasks the product needed to perform: signal detection, synthesis, and surfacing actionable insights without noise.</p>
+          <p>The output was a structured decision document: a clear recommendation with the key assumptions it rested on, the risks to monitor, and the conditions under which the recommendation would change.</p>
+        </div>
+      </div>
+
+      <div class="proj-section">
+        <span class="proj-section-label">Outcome</span>
+        <div class="proj-section-text">
+          <p>The feasibility study delivered a clear, evidence-backed recommendation to stakeholders — giving the team a confident foundation for their investment decision rather than proceeding on intuition.</p>
+          <p>This kind of work often gets undervalued because it doesn't always result in a build. But a well-reasoned no-build decision saves months of engineering time and keeps focus on higher-value bets. That's product management working as intended.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="proj-shots">
+    <div class="shots-label">Visuals</div>
+    <div class="shots-grid">
+      <div class="shot"><img src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=800&q=80&auto=format&fit=crop" alt="Data dashboard" loading="lazy"/></div>
+      <div class="shot"><img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80&auto=format&fit=crop" alt="Analytics" loading="lazy"/></div>
+    </div>
+  </section>
+
+  <section class="proj-next-nav">
+    <a class="proj-next-link" href="juniper.html">
+      <span class="proj-next-eyebrow">Next Project</span>
+      <span class="proj-next-name">Juniper Platform →</span>
+    </a>
+  </section>
+
+  <footer class="footer">
+    <span>Moiz Alam</span><span>·</span><span>Senior Product Manager</span><span>·</span><span>Sydney</span>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+</html>

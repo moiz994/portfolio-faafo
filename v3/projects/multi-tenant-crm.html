@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Multi-Tenant CRM — Moiz Alam</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../styles.css" />
+  <link rel="stylesheet" href="project.css" />
+</head>
+<body>
+
+  <nav class="navbar">
+    <a href="../index.html" class="nav-logo">Moiz Alam</a>
+    <div class="nav-right">
+      <a href="../index.html#gallery" class="nav-back">← All Projects</a>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+        <div class="toggle-icon-wrap">
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5" fill="currentColor" stroke="none"/>
+            <line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/>
+            <line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/>
+            <line x1="5.64" y1="5.64" x2="4.22" y2="4.22"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+            <line x1="5.64" y1="18.36" x2="4.22" y2="19.78"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+          </svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" fill="currentColor" stroke="none"/>
+          </svg>
+        </div>
+      </button>
+    </div>
+  </nav>
+
+  <section class="proj-hero">
+    <div class="proj-meta">
+      <span class="wtag yellow">SaaS · CRM</span>
+      <span class="wtag">Dubizzle Labs</span>
+      <span class="wtag">2020–2021</span>
+    </div>
+    <h1 class="proj-title">Multi-Tenant<br>CRM</h1>
+    <p class="proj-tagline">End-to-end delivery of a multi-tenant SaaS CRM in 5 months — replacing legacy systems and migrating 4 regional tenants.</p>
+  </section>
+
+  <div class="proj-hero-img">
+    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1400&q=80&auto=format&fit=crop" alt="Multi-Tenant CRM"/>
+  </div>
+
+  <section class="proj-metrics">
+    <div class="metrics-row">
+      <div class="metric"><span class="metric-val">5 mo</span><span class="metric-label">0 to production</span></div>
+      <div class="metric"><span class="metric-val">4</span><span class="metric-label">Regional tenants migrated</span></div>
+      <div class="metric"><span class="metric-val">Multi-tenant</span><span class="metric-label">Architecture</span></div>
+      <div class="metric"><span class="metric-val">Legacy → SaaS</span><span class="metric-label">Transition</span></div>
+    </div>
+  </section>
+
+  <section class="proj-body">
+    <div class="proj-sections">
+
+      <div class="proj-section">
+        <span class="proj-section-label">The Challenge</span>
+        <div class="proj-section-text">
+          <p>Dubizzle Labs operated across four regional markets, each running its own fragmented CRM toolset. Sales teams had inconsistent processes, management had no unified view of pipeline, and the technical overhead of maintaining four separate systems was growing. The decision was made to consolidate onto a single multi-tenant SaaS CRM — built from scratch.</p>
+          <p>The complexity was in the multi-tenancy: each regional team had its own workflows, data structures, and operational habits. Building one platform that served all four without forcing them into a one-size-fits-all experience required careful architecture decisions and significant stakeholder management.</p>
+        </div>
+      </div>
+
+      <div class="proj-section">
+        <span class="proj-section-label">Approach</span>
+        <div class="proj-section-text">
+          <p>I owned the product end-to-end — from requirements gathering across all four regional teams to delivery against the 5-month timeline. The first phase was understanding the divergences: what was truly different between regions versus what just felt different but could be unified.</p>
+          <p>I designed a tenant configuration system that gave each region flexibility in workflows and fields while keeping the core data model shared. This was the key architectural decision that made the system both maintainable and adopted — users got something that felt built for them, not forced on them.</p>
+          <p>Migration planning ran in parallel with build. Each tenant had its own data migration plan, user training schedule, and go-live date. I coordinated this across four regional leads while keeping the engineering team focused on the build.</p>
+        </div>
+      </div>
+
+      <div class="proj-section">
+        <span class="proj-section-label">Outcome</span>
+        <div class="proj-section-text">
+          <p>The CRM went live in <em>5 months</em>, with all <em>four regional tenants</em> successfully migrated off legacy systems. The platform unified sales reporting for the first time, giving leadership a single view of pipeline across markets.</p>
+          <p>Beyond the software, this project was a lesson in what it takes to deliver complex, multi-stakeholder enterprise products — where the technical challenge is often easier than the organisational one.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="proj-shots">
+    <div class="shots-label">Visuals</div>
+    <div class="shots-grid">
+      <div class="shot"><img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&q=80&auto=format&fit=crop" alt="Business planning" loading="lazy"/></div>
+      <div class="shot"><img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&q=80&auto=format&fit=crop" alt="Team strategy" loading="lazy"/></div>
+    </div>
+  </section>
+
+  <section class="proj-next-nav">
+    <a class="proj-next-link" href="product-bootcamp.html">
+      <span class="proj-next-eyebrow">Next Project</span>
+      <span class="proj-next-name">Product Bootcamp →</span>
+    </a>
+  </section>
+
+  <footer class="footer">
+    <span>Moiz Alam</span><span>·</span><span>Senior Product Manager</span><span>·</span><span>Sydney</span>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+</html>
