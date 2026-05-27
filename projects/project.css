@@ -7,7 +7,7 @@
   transition: color 0.2s !important;
   letter-spacing: 0.2px;
 }
-.nav-back:hover { color: var(--white); }
+.nav-back:hover { color: var(--fg); }
 
 /* ===== PROJECT HERO ===== */
 .proj-hero {
@@ -32,7 +32,7 @@
   font-weight: 400;
   line-height: 1.0;
   letter-spacing: -1.5px;
-  color: var(--white);
+  color: var(--fg);
   margin-bottom: 22px;
 }
 
@@ -83,7 +83,7 @@
   font-family: var(--serif);
   font-size: 2.4rem;
   font-weight: 400;
-  color: var(--white);
+  color: var(--fg);
   letter-spacing: -0.5px;
   line-height: 1;
 }
@@ -135,7 +135,7 @@
 }
 .proj-section-text p + p { margin-top: 16px; }
 .proj-section-text em {
-  color: var(--white);
+  color: var(--fg);
   font-style: normal;
   font-weight: 500;
 }
@@ -206,7 +206,7 @@
   font-family: var(--serif);
   font-size: clamp(1.8rem, 4vw, 3rem);
   font-weight: 400;
-  color: var(--white);
+  color: var(--fg);
   letter-spacing: -0.5px;
   line-height: 1.1;
   transition: color 0.2s !important;

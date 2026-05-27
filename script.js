@@ -2,10 +2,10 @@
 (function () {
   const root = document.documentElement;
   const btn = document.getElementById('themeToggle');
-  if (localStorage.getItem('theme') === 'light') root.classList.add('light');
+  if (localStorage.getItem('theme') === 'dark') root.classList.add('dark');
   btn.addEventListener('click', () => {
-    root.classList.toggle('light');
-    localStorage.setItem('theme', root.classList.contains('light') ? 'light' : 'dark');
+    root.classList.toggle('dark');
+    localStorage.setItem('theme', root.classList.contains('dark') ? 'dark' : 'light');
   });
 })();
 

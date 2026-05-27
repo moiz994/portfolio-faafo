@@ -3,23 +3,6 @@
 
 /* ===== THEME VARIABLES ===== */
 :root {
-  --bg:       #0B0B0B;
-  --fg:       #F0EEE9;
-  --off:      #888885;
-  --mid:      #555552;
-  --rule:     #1E1E1E;
-  --card:     #131313;
-  --nav-bg:   rgba(11,11,11,0.88);
-  --blue:     #5B8EF0;
-  --red:      #E8655A;
-  --yellow:   #D4A847;
-  --green:    #4CAF70;
-  --font:     'DM Sans', sans-serif;
-  --serif:    'EB Garamond', serif;
-  --radius:   14px;
-}
-
-:root.light {
   --bg:       #F4F2ED;
   --fg:       #0B0B09;
   --off:      #55554F;
@@ -31,6 +14,23 @@
   --red:      #C42B20;
   --yellow:   #9E7200;
   --green:    #1A6B35;
+  --font:     'DM Sans', sans-serif;
+  --serif:    'EB Garamond', serif;
+  --radius:   14px;
+}
+
+:root.dark {
+  --bg:       #0B0B0B;
+  --fg:       #F0EEE9;
+  --off:      #888885;
+  --mid:      #555552;
+  --rule:     #1E1E1E;
+  --card:     #131313;
+  --nav-bg:   rgba(11,11,11,0.88);
+  --blue:     #5B8EF0;
+  --red:      #E8655A;
+  --yellow:   #D4A847;
+  --green:    #4CAF70;
 }
 
 /* ===== BASE ===== */
@@ -144,8 +144,8 @@ em { font-style: italic; }
 .icon-sun  { opacity: 0; transform: rotate(90deg) scale(0.4); pointer-events: none; }
 .icon-moon { opacity: 1; transform: none; }
 
-:root.light .icon-sun  { opacity: 1; transform: none; }
-:root.light .icon-moon { opacity: 0; transform: rotate(-90deg) scale(0.4); }
+:root.dark .icon-sun  { opacity: 1; transform: none; }
+:root.dark .icon-moon { opacity: 0; transform: rotate(-90deg) scale(0.4); }
 
 /* ===== HERO ===== */
 .hero {
@@ -408,19 +408,19 @@ em { font-style: italic; }
   border-radius: 12px;
   font-size: 0.66rem;
   font-weight: 500;
-  background: rgba(255,255,255,0.04);
+  background: rgba(0,0,0,0.04);
   color: var(--mid);
   border: 1px solid var(--rule);
 }
-.wtag.blue   { background: rgba(91,142,240,0.12);  color: #8BB4FF; border-color: rgba(91,142,240,0.2); }
-.wtag.red    { background: rgba(232,101,90,0.12);  color: #FF9B94; border-color: rgba(232,101,90,0.2); }
-.wtag.yellow { background: rgba(212,168,71,0.12);  color: #F0C86A; border-color: rgba(212,168,71,0.2); }
-.wtag.green  { background: rgba(76,175,112,0.12);  color: #6FD48E; border-color: rgba(76,175,112,0.2); }
+.wtag.blue   { background: rgba(26,77,199,0.08);  color: #1A4DC7; border-color: rgba(26,77,199,0.2); }
+.wtag.red    { background: rgba(196,43,32,0.08);  color: #C42B20; border-color: rgba(196,43,32,0.2); }
+.wtag.yellow { background: rgba(158,114,0,0.08);  color: #9E7200; border-color: rgba(158,114,0,0.2); }
+.wtag.green  { background: rgba(26,107,53,0.08);  color: #1A6B35; border-color: rgba(26,107,53,0.2); }
 
-:root.light .wtag.blue   { background: rgba(26,77,199,0.08);  color: #1A4DC7; border-color: rgba(26,77,199,0.2); }
-:root.light .wtag.red    { background: rgba(196,43,32,0.08);  color: #C42B20; border-color: rgba(196,43,32,0.2); }
-:root.light .wtag.yellow { background: rgba(158,114,0,0.08);  color: #9E7200; border-color: rgba(158,114,0,0.2); }
-:root.light .wtag.green  { background: rgba(26,107,53,0.08);  color: #1A6B35; border-color: rgba(26,107,53,0.2); }
+:root.dark .wtag.blue   { background: rgba(91,142,240,0.12);  color: #8BB4FF; border-color: rgba(91,142,240,0.2); }
+:root.dark .wtag.red    { background: rgba(232,101,90,0.12);  color: #FF9B94; border-color: rgba(232,101,90,0.2); }
+:root.dark .wtag.yellow { background: rgba(212,168,71,0.12);  color: #F0C86A; border-color: rgba(212,168,71,0.2); }
+:root.dark .wtag.green  { background: rgba(76,175,112,0.12);  color: #6FD48E; border-color: rgba(76,175,112,0.2); }
 
 .card-body { flex: 1; }
 
@@ -531,17 +531,17 @@ em { font-style: italic; }
   padding: 3px 10px;
   border-radius: 10px;
 }
-.journey-co.blue   { background: rgba(91,142,240,0.12);  color: #8BB4FF; }
-.journey-co.red    { background: rgba(232,101,90,0.12);  color: #FF9B94; }
-.journey-co.yellow { background: rgba(212,168,71,0.12);  color: #F0C86A; }
-.journey-co.green  { background: rgba(76,175,112,0.12);  color: #6FD48E; }
-.journey-co.mid    { background: rgba(255,255,255,0.05); color: var(--mid); }
+.journey-co.blue   { background: rgba(26,77,199,0.1);  color: #1A4DC7; }
+.journey-co.red    { background: rgba(196,43,32,0.1);  color: #C42B20; }
+.journey-co.yellow { background: rgba(158,114,0,0.1);  color: #9E7200; }
+.journey-co.green  { background: rgba(26,107,53,0.1);  color: #1A6B35; }
+.journey-co.mid    { background: rgba(0,0,0,0.05);     color: var(--mid); }
 
-:root.light .journey-co.blue   { background: rgba(26,77,199,0.1);  color: #1A4DC7; }
-:root.light .journey-co.red    { background: rgba(196,43,32,0.1);  color: #C42B20; }
-:root.light .journey-co.yellow { background: rgba(158,114,0,0.1);  color: #9E7200; }
-:root.light .journey-co.green  { background: rgba(26,107,53,0.1);  color: #1A6B35; }
-:root.light .journey-co.mid    { background: rgba(0,0,0,0.05);     color: var(--mid); }
+:root.dark .journey-co.blue   { background: rgba(91,142,240,0.12);  color: #8BB4FF; }
+:root.dark .journey-co.red    { background: rgba(232,101,90,0.12);  color: #FF9B94; }
+:root.dark .journey-co.yellow { background: rgba(212,168,71,0.12);  color: #F0C86A; }
+:root.dark .journey-co.green  { background: rgba(76,175,112,0.12);  color: #6FD48E; }
+:root.dark .journey-co.mid    { background: rgba(255,255,255,0.05); color: var(--mid); }
 
 .journey-body p {
   font-size: 0.88rem;
