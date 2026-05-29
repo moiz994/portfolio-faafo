@@ -427,16 +427,6 @@ em { font-style: italic; }
   color: var(--mid);
   border: 1px solid var(--rule);
 }
-.wtag.blue   { background: rgba(26,77,199,0.08);  color: #1A4DC7; border-color: rgba(26,77,199,0.2); }
-.wtag.red    { background: rgba(196,43,32,0.08);  color: #C42B20; border-color: rgba(196,43,32,0.2); }
-.wtag.yellow { background: rgba(158,114,0,0.08);  color: #9E7200; border-color: rgba(158,114,0,0.2); }
-.wtag.green  { background: rgba(26,107,53,0.08);  color: #1A6B35; border-color: rgba(26,107,53,0.2); }
-
-:root.dark .wtag.blue   { background: rgba(91,142,240,0.12);  color: #8BB4FF; border-color: rgba(91,142,240,0.2); }
-:root.dark .wtag.red    { background: rgba(232,101,90,0.12);  color: #FF9B94; border-color: rgba(232,101,90,0.2); }
-:root.dark .wtag.yellow { background: rgba(212,168,71,0.12);  color: #F0C86A; border-color: rgba(212,168,71,0.2); }
-:root.dark .wtag.green  { background: rgba(76,175,112,0.12);  color: #6FD48E; border-color: rgba(76,175,112,0.2); }
-
 .card-body { flex: 1; }
 
 .card-body h3 {
