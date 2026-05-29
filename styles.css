@@ -176,17 +176,6 @@ em { font-style: italic; }
   pointer-events: none;
 }
 
-.hero-blob {
-  position: absolute;
-  bottom: -40px;
-  right: -40px;
-  width: 80%;
-  height: 68%;
-  background: #c8d9f0;
-  border-radius: 44% 56% 38% 62% / 52% 40% 60% 48%;
-  z-index: 0;
-}
-
 .hero-photo {
   position: absolute;
   bottom: 0;
@@ -310,17 +299,6 @@ em { font-style: italic; }
 }
 .btn-ghost:hover { border-color: var(--off); color: var(--fg); transform: translateY(-1px); }
 
-.hero-scroll {
-  position: absolute;
-  right: 48px;
-  bottom: 72px;
-  font-size: 0.65rem;
-  font-weight: 600;
-  color: var(--mid);
-  text-transform: uppercase;
-  letter-spacing: 3px;
-  writing-mode: vertical-rl;
-}
 
 /* ===== ABOUT STRIP ===== */
 .about-strip {
@@ -516,6 +494,95 @@ em { font-style: italic; }
   flex-shrink: 0;
 }
 .work-card:hover .card-link { color: var(--fg); }
+
+/* Neutralise coloured tags — monochrome by default now */
+.wtag { background: rgba(0,0,0,0.04); color: var(--mid); border: 1px solid var(--rule); }
+:root.dark .wtag { background: rgba(255,255,255,0.05); }
+
+/* Work CTA */
+.work-cta {
+  margin-top: 48px;
+  display: flex;
+  justify-content: center;
+}
+
+/* All Projects page */
+.projects-page { padding-top: 132px; }
+.back-link {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--mid);
+  margin-bottom: 24px;
+  transition: color 0.2s !important;
+}
+.back-link:hover { color: var(--fg); }
+
+/* ============================================================
+   FEATURED WORK — EDITORIAL LIST
+   Matches the Journey / Personal row rhythm (140px + 1fr)
+   ============================================================ */
+.work-grid.v-list { display: block; }
+
+.v-list .work-card {
+  grid-column: auto;
+  display: grid;
+  grid-template-columns: 140px 1fr auto;
+  align-items: baseline;
+  gap: 36px;
+  background: none;
+  border: none;
+  border-top: 1px solid var(--rule);
+  border-radius: 0;
+  padding: 36px 0;
+  transition: none !important;
+}
+.v-list .work-card:last-child { border-bottom: 1px solid var(--rule); }
+.v-list .work-card:hover { transform: none; }
+
+.v-list .card-top { display: contents; }
+
+.v-list .card-num {
+  font-family: var(--serif);
+  font-size: 1.05rem;
+  font-weight: 400;
+  color: var(--mid);
+  letter-spacing: 0;
+  padding-top: 7px;
+}
+
+.v-list .card-tags {
+  order: 3;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 7px;
+  align-self: center;
+}
+
+.v-list .card-body { order: 2; }
+
+.v-list .card-body h3 {
+  display: inline-block;
+  font-size: 1.7rem;
+  margin-bottom: 8px;
+  transition: transform 0.25s ease !important;
+}
+.v-list .card-body h3::after {
+  content: ' →';
+  opacity: 0;
+  margin-left: 4px;
+  transition: opacity 0.25s ease !important;
+}
+.v-list .work-card:hover .card-body h3 { transform: translateX(6px); }
+.v-list .work-card:hover .card-body h3::after { opacity: 1; }
+
+.v-list .card-body p {
+  font-size: 0.9rem;
+  line-height: 1.72;
+  max-width: 620px;
+}
+
+.v-list .card-footer { display: none; }
 
 /* ===== JOURNEY ===== */
 .journey {
@@ -717,7 +784,6 @@ em { font-style: italic; }
   .hero-layout { grid-template-columns: 1fr; }
   .hero-visual { display: none; }
   .hero-inner { max-width: 100%; }
-  .hero-scroll { display: none; }
   .hero-bottom { flex-direction: column; align-items: flex-start; gap: 28px; }
   .hero-stats { gap: 18px; flex-wrap: wrap; }
 
