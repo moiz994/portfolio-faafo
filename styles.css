@@ -668,8 +668,8 @@ em { font-style: italic; }
 
 /* text colours on dark background */
 .layout-scroll .card-num { color: rgba(255,255,255,0.5); }
-.layout-scroll .card-body h3 { color: #fff; }
-.layout-scroll .card-body p { color: rgba(255,255,255,0.72); }
+.layout-scroll .work-card .card-body h3 { color: #fff; }
+.layout-scroll .work-card .card-body p { color: rgba(255,255,255,0.72); }
 .layout-scroll .work-card .card-body p em { color: #fff; }
 .layout-scroll .wtag { color: rgba(255,255,255,0.6); border-color: rgba(255,255,255,0.18); background: rgba(255,255,255,0.08); }
 .layout-scroll .work-card:hover { border-color: transparent; }
