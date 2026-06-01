@@ -149,7 +149,7 @@ em { font-style: italic; }
 
 /* ===== HERO ===== */
 .hero {
-  min-height: 100vh;
+  min-height: clamp(680px, 85vh, 860px);
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
