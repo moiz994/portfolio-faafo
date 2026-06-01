@@ -9,6 +9,29 @@
   });
 })();
 
+// Work carousel prev/next
+(function () {
+  const grid = document.getElementById('workGrid');
+  const prevBtn = document.getElementById('workPrev');
+  const nextBtn = document.getElementById('workNext');
+  if (!grid || !prevBtn || !nextBtn) return;
+
+  function cardWidth() {
+    const card = grid.querySelector('.work-card');
+    return card ? card.offsetWidth + 14 : 340;
+  }
+
+  function updateBtns() {
+    prevBtn.disabled = grid.scrollLeft <= 1;
+    nextBtn.disabled = grid.scrollLeft + grid.offsetWidth >= grid.scrollWidth - 1;
+  }
+
+  prevBtn.onclick = () => grid.scrollBy({ left: -cardWidth(), behavior: 'smooth' });
+  nextBtn.onclick = () => grid.scrollBy({ left: cardWidth(), behavior: 'smooth' });
+  grid.addEventListener('scroll', updateBtns, { passive: true });
+  updateBtns();
+})();
+
 // Scroll reveal
 const observer = new IntersectionObserver(
   (entries) => entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); }),

@@ -103,14 +103,20 @@
   <!-- WORK -->
   <section class="work" id="work">
     <div class="container">
-      <div class="section-header">
-        <h2 class="section-title">Featured Work</h2>
-        <p class="section-sub">A few products I've taken from idea to shipped.</p>
+      <div class="section-header work-section-header">
+        <div>
+          <h2 class="section-title">Featured Work</h2>
+          <p class="section-sub">A few products I've taken from idea to shipped.</p>
+        </div>
+        <a href="projects.html" class="btn-secondary">View all projects →</a>
       </div>
 
-      <div class="work-grid v-list" id="workGrid">
+      <div class="work-grid layout-scroll" id="workGrid">
 
-        <a class="work-card" href="projects/benchprep.html">
+        <a class="work-card reveal" href="projects/benchprep.html">
+          <div class="card-cover">
+            <img src="https://images.unsplash.com/photo-1571171637578-41bc2dd41cd2?w=900&q=80&auto=format&fit=crop" alt="BenchPrep" loading="lazy" />
+          </div>
           <div class="card-top">
             <div class="card-num">01</div>
             <div class="card-tags">
@@ -122,15 +128,12 @@
             <h3>BenchPrep</h3>
             <p>LLM-based interview generation and scoring platform. Defined MVP, iterated on prompt design for evaluation reliability. Shipped to beta in <em>14 weeks</em>.</p>
           </div>
-          <div class="card-footer">
-            <div class="card-pills">
-              <span>Prompt Engineering</span><span>MVP Definition</span><span>0 to 1</span>
-            </div>
-            <span class="card-link">Case study →</span>
-          </div>
         </a>
 
-        <a class="work-card" href="projects/in-app-payments.html">
+        <a class="work-card reveal" href="projects/in-app-payments.html">
+          <div class="card-cover">
+            <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=900&q=80&auto=format&fit=crop" alt="In-App Payments" loading="lazy" />
+          </div>
           <div class="card-top">
             <div class="card-num">02</div>
             <div class="card-tags">
@@ -142,15 +145,12 @@
             <h3>In-App Payments</h3>
             <p>Google & Apple Pay across 3,000+ courses. New revenue stream generating <em>$700K+ in year one</em>.</p>
           </div>
-          <div class="card-footer">
-            <div class="card-pills">
-              <span>Google Pay</span><span>Apple Pay</span>
-            </div>
-            <span class="card-link">Case study →</span>
-          </div>
         </a>
 
-        <a class="work-card" href="projects/juniper.html">
+        <a class="work-card reveal" href="projects/juniper.html">
+          <div class="card-cover">
+            <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=900&q=80&auto=format&fit=crop" alt="Juniper Platform" loading="lazy" />
+          </div>
           <div class="card-top">
             <div class="card-num">03</div>
             <div class="card-tags">
@@ -162,15 +162,12 @@
             <h3>Juniper Platform</h3>
             <p>Internal innovation platform built solo in <em>2 weeks</em> using AI-assisted dev. Adopted by 200+ employees on day one.</p>
           </div>
-          <div class="card-footer">
-            <div class="card-pills">
-              <span>AI-assisted Dev</span><span>Solo Build</span><span>0 to 1</span>
-            </div>
-            <span class="card-link">Case study →</span>
-          </div>
         </a>
 
-        <a class="work-card" href="projects/edx-mobile.html">
+        <a class="work-card reveal" href="projects/edx-mobile.html">
+          <div class="card-cover">
+            <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=900&q=80&auto=format&fit=crop" alt="edX Mobile Rewrite" loading="lazy" />
+          </div>
           <div class="card-top">
             <div class="card-num">04</div>
             <div class="card-tags">
@@ -182,18 +179,13 @@
             <h3>edX Mobile Rewrite</h3>
             <p>Full iOS & Android rewrite delivered in <em>under 4 months</em>. Aligned cross-functional remote teams across time zones.</p>
           </div>
-          <div class="card-footer">
-            <div class="card-pills">
-              <span>iOS & Android</span><span>Remote Teams</span>
-            </div>
-            <span class="card-link">Case study →</span>
-          </div>
         </a>
 
       </div>
 
-      <div class="work-cta">
-        <a href="projects.html" class="btn-primary">View all projects →</a>
+      <div class="work-nav">
+        <button class="work-nav-btn" id="workPrev" aria-label="Previous">←</button>
+        <button class="work-nav-btn" id="workNext" aria-label="Next">→</button>
       </div>
     </div>
   </section>
