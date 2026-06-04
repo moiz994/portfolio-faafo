@@ -794,7 +794,7 @@ em { font-style: italic; }
   width: 64px;
   height: 64px;
   border-radius: 10px;
-  background: var(--bg);
+  background: #fff;
   border: 1px solid var(--rule);
   display: flex;
   align-items: center;
@@ -807,6 +807,7 @@ em { font-style: italic; }
   height: 100%;
   object-fit: cover;
   display: block;
+  mix-blend-mode: multiply;
 }
 .journey-card-logo span {
   font-family: var(--serif);
