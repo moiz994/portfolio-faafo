@@ -778,7 +778,7 @@ em { font-style: italic; }
 /* Journey card */
 .journey-card {
   display: grid;
-  grid-template-columns: 64px 200px 1fr;
+  grid-template-columns: 64px 240px 1fr;
   gap: 28px;
   align-items: start;
   background: var(--card);
