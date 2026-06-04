@@ -814,8 +814,21 @@ em { font-style: italic; }
 .journey-card-meta {
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 6px;
   padding-top: 2px;
+}
+
+.journey-org-line {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.journey-org-sep {
+  color: var(--rule);
+  font-family: var(--font);
+  font-size: 0.68rem;
+  line-height: 1;
 }
 .journey-card-meta h3 {
   font-family: var(--serif);
