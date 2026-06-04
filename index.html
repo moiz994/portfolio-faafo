@@ -113,10 +113,14 @@
           <h2 class="section-title">Featured Work</h2>
           <p class="section-sub">A few products I've taken from idea to shipped.</p>
         </div>
-        <a href="projects.html" class="btn-secondary">View all projects <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="4" y1="12" x2="20" y2="12"/><polyline points="12 5 20 12 12 19"/></svg></a>
+        <div class="work-header-nav">
+          <button class="work-nav-btn" id="workPrev" aria-label="Previous"><svg class="arrow-icon arrow-left" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="4" y1="12" x2="20" y2="12"/><polyline points="12 5 20 12 12 19"/></svg></button>
+          <button class="work-nav-btn" id="workNext" aria-label="Next"><svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="4" y1="12" x2="20" y2="12"/><polyline points="12 5 20 12 12 19"/></svg></button>
+        </div>
       </div>
 
       <div class="work-grid layout-scroll" id="workGrid">
+        <div class="carousel-spacer" aria-hidden="true"></div>
 
         <a class="work-card reveal" href="projects/benchprep.html">
           <div class="card-cover">
@@ -186,11 +190,11 @@
           </div>
         </a>
 
+        <div class="carousel-spacer" aria-hidden="true"></div>
       </div>
 
       <div class="work-nav">
-        <button class="work-nav-btn" id="workPrev" aria-label="Previous"><svg class="arrow-icon arrow-left" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="4" y1="12" x2="20" y2="12"/><polyline points="12 5 20 12 12 19"/></svg></button>
-        <button class="work-nav-btn" id="workNext" aria-label="Next"><svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="4" y1="12" x2="20" y2="12"/><polyline points="12 5 20 12 12 19"/></svg></button>
+        <a href="projects.html" class="btn-secondary">View all projects <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="4" y1="12" x2="20" y2="12"/><polyline points="12 5 20 12 12 19"/></svg></a>
       </div>
     </div>
   </section>
