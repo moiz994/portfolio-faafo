@@ -14,6 +14,11 @@
   --red:      #C42B20;
   --yellow:   #9E7200;
   --green:    #1A6B35;
+  --accent-soft: rgba(94,131,174,0.10);
+  --accent-line: rgba(94,131,174,0.25);
+  --accent-ink:  #F9F5ED;
+  --shadow-hover: 0 12px 32px rgba(0,0,0,0.07);
+  --shadow-image: 0 16px 40px rgba(0,0,0,0.18);
   --font:     'DM Sans', sans-serif;
   --serif:    'EB Garamond', serif;
   --radius:   14px;
@@ -210,7 +215,7 @@ em { font-style: italic; }
 }
 
 .hero-heading .line { display: block; }
-.hero-heading .italic { font-style: italic; color: var(--off); }
+.hero-heading .italic { font-style: italic; color: var(--blue); }
 
 .hero-sub {
   font-size: 1.05rem;
@@ -276,7 +281,7 @@ em { font-style: italic; }
   padding: 12px 26px;
   border-radius: 28px;
   background: var(--blue);
-  color: #F9F5ED;
+  color: var(--accent-ink);
   transition: opacity 0.2s, transform 0.2s !important;
 }
 .btn-primary:hover { opacity: 0.88; transform: translateY(-1px); }
@@ -396,7 +401,7 @@ em { font-style: italic; }
 .work-card:hover {
   border-color: var(--off);
   transform: translateY(-4px);
-  box-shadow: 0 12px 32px rgba(0,0,0,0.07);
+  box-shadow: var(--shadow-hover);
 }
 
 .work-card.featured    { grid-column: span 7; }
@@ -428,10 +433,16 @@ em { font-style: italic; }
   border-radius: 12px;
   font-size: 0.66rem;
   font-weight: 500;
+  background: var(--accent-soft);
+  color: var(--blue);
+  border: 1px solid var(--accent-line);
+}
+.wtag.co {
   background: rgba(0,0,0,0.04);
   color: var(--mid);
   border: 1px solid var(--rule);
 }
+:root.dark .wtag.co { background: rgba(255,255,255,0.05); }
 .card-body { flex: 1; }
 
 .card-body h3 {
@@ -490,9 +501,6 @@ em { font-style: italic; }
 }
 .work-card:hover .card-link { color: var(--blue); }
 
-/* Neutralise coloured tags — monochrome by default now */
-.wtag { background: rgba(0,0,0,0.04); color: var(--mid); border: 1px solid var(--rule); }
-:root.dark .wtag { background: rgba(255,255,255,0.05); }
 
 /* Work section header with "View all" top-right */
 .work-section-header {
@@ -686,11 +694,11 @@ em { font-style: italic; }
   padding: 0;
   justify-content: flex-end;
   border-color: transparent;
-  background: #111;
+  background: #2A2A2A;
 }
 .layout-image .work-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 16px 40px rgba(0,0,0,0.18);
+  box-shadow: var(--shadow-image);
   border-color: transparent;
 }
 .layout-image .card-cover {
