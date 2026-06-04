@@ -642,7 +642,7 @@ em { font-style: italic; }
   overflow: hidden;
   height: 420px;
   justify-content: flex-end;
-  border-color: transparent;
+  border: none;
 }
 
 /* full-bleed image */
@@ -684,7 +684,7 @@ em { font-style: italic; }
 .layout-scroll .work-card .card-body p { color: rgba(255,255,255,0.72); }
 .layout-scroll .work-card .card-body p em { color: #fff; }
 .layout-scroll .wtag { color: rgba(255,255,255,0.6); border-color: rgba(255,255,255,0.18); background: rgba(255,255,255,0.08); }
-.layout-scroll .work-card:hover { border-color: transparent; }
+.layout-scroll .work-card:hover { border: none; }
 
 /* ===== LAYOUT: IMAGE GRID (All Projects page) ===== */
 .layout-image .work-card {
@@ -693,13 +693,12 @@ em { font-style: italic; }
   height: 420px;
   padding: 0;
   justify-content: flex-end;
-  border-color: transparent;
+  border: none;
   background: #2A2A2A;
 }
 .layout-image .work-card:hover {
   transform: translateY(-4px);
   box-shadow: var(--shadow-image);
-  border-color: transparent;
 }
 .layout-image .card-cover {
   position: absolute;
