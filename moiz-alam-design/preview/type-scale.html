@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<link rel="stylesheet" href="../colors_and_type.css" />
+<link rel="stylesheet" href="card.css" />
+<style>
+  .stack { display: flex; flex-direction: column; gap: 13px; }
+  .item { display: flex; align-items: baseline; gap: 16px; }
+  .spec { font-size: 0.6rem; color: var(--mid); width: 86px; flex-shrink: 0; text-transform: uppercase; letter-spacing: 1px; padding-top: 4px; }
+  .s-title { font-family: var(--serif); font-size: 2rem; font-weight: 400; letter-spacing: -0.8px; line-height: 1; }
+  .s-head { font-family: var(--serif); font-size: 1.25rem; font-weight: 400; letter-spacing: -0.2px; }
+  .s-body { font-family: var(--font); font-size: 1rem; font-weight: 300; color: var(--off); }
+  .s-eye { font-family: var(--font); font-size: 0.72rem; font-weight: 500; text-transform: uppercase; letter-spacing: 2px; color: var(--mid); }
+</style>
+</head>
+<body>
+  <div class="stack">
+    <div class="item"><span class="spec">Title</span><span class="s-title">Selected Work</span></div>
+    <div class="item"><span class="spec">Heading</span><span class="s-head">BenchPrep</span></div>
+    <div class="item"><span class="spec">Body 300</span><span class="s-body">From idea to shipped, fast.</span></div>
+    <div class="item"><span class="spec">Eyebrow</span><span class="s-eye">Senior Product Manager</span></div>
+  </div>
+</body>
+</html>

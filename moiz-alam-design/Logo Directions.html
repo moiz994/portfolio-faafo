@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Moiz Alam — Logo Directions</title>
+  <link rel="stylesheet" href="colors_and_type.css" />
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: var(--font); }
+
+    .ab { width: 100%; height: 100%; display: flex; flex-direction: column;
+          align-items: center; justify-content: center; gap: 20px;
+          background: var(--bg); padding: 24px; }
+    .ab.dark { background: #0B0B0B; }
+    .ab.dark .cap { color: #555552; }
+    .mk { display: flex; flex-direction: column; align-items: center; justify-content: center; }
+    .cap { font-family: var(--font); font-size: 0.6rem; font-weight: 500; text-transform: uppercase;
+           letter-spacing: 1.6px; color: var(--mid); text-align: center; }
+
+    /* ---- Monograms ---- */
+    .m-lig    { font-family: var(--serif); font-size: 5.4rem; font-weight: 500; letter-spacing: -7px; color: var(--fg); line-height: 1; }
+    .m-track  { font-family: var(--font); font-size: 3rem; font-weight: 600; letter-spacing: 12px; color: var(--fg); line-height: 1; padding-left: 12px; }
+    .m-track-rule { width: 52px; height: 1px; background: var(--rule); margin-top: 14px; }
+    .m-badge  { width: 102px; height: 102px; border: 1px solid var(--fg); border-radius: 5px; display: flex; align-items: center; justify-content: center; }
+    .m-badge span { font-family: var(--serif); font-size: 2.8rem; font-weight: 500; letter-spacing: -2px; color: var(--fg); }
+    .m-dot    { font-family: var(--serif); font-size: 4.8rem; font-weight: 500; color: var(--fg); line-height: 1; }
+    .m-dot b  { font-weight: 500; color: var(--mid); margin: 0 -4px; position: relative; top: -0.12em; }
+    .m-ital   { font-family: var(--serif); font-style: italic; font-size: 5.4rem; font-weight: 500; color: var(--fg); line-height: 1; }
+
+    /* ---- Logotypes ---- */
+    .l-serif  { font-family: var(--serif); font-size: 2.7rem; font-weight: 400; letter-spacing: -1px; color: var(--fg); }
+    .l-mix    { font-family: var(--serif); font-size: 2.7rem; font-weight: 400; letter-spacing: -1px; color: var(--fg); }
+    .l-mix em { font-style: italic; color: var(--off); }
+    .l-mast   { display: flex; flex-direction: column; align-items: center; gap: 9px; }
+    .l-mast .rule { width: 232px; height: 1px; background: var(--rule); }
+    .l-mast .name { font-family: var(--font); font-size: 1.15rem; font-weight: 600; text-transform: uppercase; letter-spacing: 8px; color: var(--fg); padding-left: 8px; }
+    .l-lock   { display: flex; flex-direction: column; align-items: center; gap: 12px; }
+    .l-lock .name { font-family: var(--serif); font-size: 2.4rem; font-weight: 400; letter-spacing: -0.8px; color: var(--fg); }
+    .l-lock .role { font-family: var(--font); font-size: 0.66rem; font-weight: 500; text-transform: uppercase; letter-spacing: 3px; color: var(--mid); }
+    .l-lock .div { width: 30px; height: 1px; background: var(--rule); }
+    .l-lower  { font-family: var(--serif); font-style: italic; font-size: 2.5rem; font-weight: 400; color: var(--off); }
+
+    /* ---- Symbols ---- */
+    .s-ast    { font-family: var(--serif); font-size: 6.5rem; font-weight: 400; color: var(--fg); line-height: 0.7; }
+    .s-bullet { display: flex; align-items: center; gap: 14px; }
+    .s-bullet .dot { width: 11px; height: 11px; border-radius: 50%; background: var(--fg); }
+    .s-bullet .ma  { font-family: var(--serif); font-size: 3.2rem; font-weight: 500; letter-spacing: -2px; color: var(--fg); }
+    .s-seal   { width: 116px; height: 116px; border-radius: 50%; border: 1px solid var(--fg); position: relative; display: flex; align-items: center; justify-content: center; }
+    .s-seal span { font-family: var(--serif); font-size: 2.2rem; font-weight: 500; letter-spacing: -1px; color: var(--fg); }
+    .s-seal .pip { position: absolute; top: 9px; left: 50%; transform: translateX(-50%); width: 5px; height: 5px; border-radius: 50%; background: var(--fg); }
+    .s-brk    { font-family: var(--serif); font-size: 3.4rem; font-weight: 500; color: var(--fg); display: flex; align-items: baseline; gap: 6px; }
+    .s-brk i  { font-style: normal; font-weight: 300; color: var(--mid); font-size: 3.8rem; }
+    .s-brk b  { font-weight: 500; letter-spacing: -2px; }
+
+    .dark .m-lig, .dark .m-track, .dark .m-dot, .dark .m-ital,
+    .dark .l-serif, .dark .s-ast, .dark .s-bullet .ma, .dark .s-seal span, .dark .s-brk b { color: #F0EEE9; }
+    .dark .m-badge { border-color: #F0EEE9; } .dark .m-badge span { color: #F0EEE9; }
+    .dark .s-bullet .dot, .dark .s-seal { border-color: #F0EEE9; }
+    .dark .s-seal { } .dark .s-seal .pip { background: #F0EEE9; }
+  </style>
+  <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div id="root"></div>
+  <script type="text/babel" src="design-canvas.jsx"></script>
+  <script type="text/babel">
+    const { DesignCanvas, DCSection, DCArtboard } = window;
+    const W = 340, H = 240;
+
+    function App() {
+      return (
+        <DesignCanvas>
+          <DCSection id="mono" title="Monograms" subtitle="The MA mark, refined">
+            <DCArtboard id="m1" label="Garamond ligature" width={W} height={H}>
+              <div className="ab"><div className="mk"><span className="m-lig">MA</span></div><span className="cap">Elegant · literary · tightly set</span></div>
+            </DCArtboard>
+            <DCArtboard id="m2" label="Tracked sans + rule" width={W} height={H}>
+              <div className="ab"><div className="mk"><span className="m-track">MA</span><div className="m-track-rule"></div></div><span className="cap">Modern · architectural · close to current</span></div>
+            </DCArtboard>
+            <DCArtboard id="m3" label="Ruled badge" width={W} height={H}>
+              <div className="ab"><div className="mk"><div className="m-badge"><span>MA</span></div></div><span className="cap">Editorial enclosure · stamp-like</span></div>
+            </DCArtboard>
+            <DCArtboard id="m4" label="Middot lockup" width={W} height={H}>
+              <div className="ab"><div className="mk"><span className="m-dot">M<b>·</b>A</span></div><span className="cap">Uses the brand's signature middot</span></div>
+            </DCArtboard>
+            <DCArtboard id="m5" label="Lowercase italic" width={W} height={H}>
+              <div className="ab"><div className="mk"><span className="m-ital">ma</span></div><span className="cap">Personal · soft · handwritten feel</span></div>
+            </DCArtboard>
+          </DCSection>
+
+          <DCSection id="logo" title="Logotypes" subtitle="The full name as a wordmark">
+            <DCArtboard id="l1" label="Garamond signature" width={W} height={H}>
+              <div className="ab"><div className="mk"><span className="l-serif">Moiz Alam</span></div><span className="cap">The default editorial voice</span></div>
+            </DCArtboard>
+            <DCArtboard id="l2" label="Roman + italic" width={W} height={H}>
+              <div className="ab"><div className="mk"><span className="l-mix">Moiz <em>Alam</em></span></div><span className="cap">Echoes the hero's roman/italic play</span></div>
+            </DCArtboard>
+            <DCArtboard id="l3" label="Masthead caps" width={W} height={H}>
+              <div className="ab"><div className="mk l-mast"><div className="rule"></div><span className="name">Moiz Alam</span><div className="rule"></div></div><span className="cap">Newspaper masthead · authoritative</span></div>
+            </DCArtboard>
+            <DCArtboard id="l4" label="Name + role lockup" width={W} height={H}>
+              <div className="ab"><div className="mk l-lock"><span className="name">Moiz Alam</span><div className="div"></div><span className="role">Senior Product Manager</span></div><span className="cap">Self-explaining · for headers &amp; cards</span></div>
+            </DCArtboard>
+            <DCArtboard id="l5" label="Lowercase italic" width={W} height={H}>
+              <div className="ab"><div className="mk"><span className="l-lower">moiz alam</span></div><span className="cap">Intimate · understated</span></div>
+            </DCArtboard>
+          </DCSection>
+
+          <DCSection id="sym" title="Symbols / Marks" subtitle="A small standalone glyph">
+            <DCArtboard id="s1" label="Reference asterisk" width={W} height={H}>
+              <div className="ab"><div className="mk"><span className="s-ast">&#42;</span></div><span className="cap">The literary footnote mark · most distinctive</span></div>
+            </DCArtboard>
+            <DCArtboard id="s2" label="Bullet + MA" width={W} height={H}>
+              <div className="ab"><div className="mk s-bullet"><span className="dot"></span><span className="ma">MA</span></div><span className="cap">Editorial bullet · pairs with nav</span></div>
+            </DCArtboard>
+            <DCArtboard id="s3" label="Seal / stamp" width={W} height={H}>
+              <div className="ab"><div className="mk"><div className="s-seal"><span className="pip"></span><span>MA</span></div></div><span className="cap">Wax-seal feel · for footers &amp; favicons</span></div>
+            </DCArtboard>
+            <DCArtboard id="s4" label="Bracketed mark" width={W} height={H}>
+              <div className="ab"><div className="mk"><span className="s-brk"><i>[</i><b>ma</b><i>]</i></span></div><span className="cap">Code/spec flavor · nods to vibe-coding</span></div>
+            </DCArtboard>
+            <DCArtboard id="s5" label="Seal on dark" width={W} height={H}>
+              <div className="ab dark"><div className="mk"><div className="s-seal"><span className="pip"></span><span>MA</span></div></div><span className="cap">How the seal sits in dark mode</span></div>
+            </DCArtboard>
+          </DCSection>
+        </DesignCanvas>
+      );
+    }
+    ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+  </script>
+</body>
+</html>

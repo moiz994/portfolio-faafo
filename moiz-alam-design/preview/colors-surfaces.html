@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<link rel="stylesheet" href="../colors_and_type.css" />
+<link rel="stylesheet" href="card.css" />
+<style>
+  .sw { display: flex; flex-direction: column; gap: 7px; }
+  .chip { width: 100%; height: 56px; border-radius: 10px; border: 1px solid var(--rule); }
+  .name { font-size: 0.72rem; font-weight: 600; color: var(--fg); }
+  .hex { font-size: 0.66rem; color: var(--mid); font-variant-numeric: tabular-nums; }
+  .grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 12px; }
+</style>
+</head>
+<body>
+  <div class="grid">
+    <div class="sw"><div class="chip" style="background:#F9F5ED"></div><span class="name">Cream bg</span><span class="hex">#F9F5ED</span></div>
+    <div class="sw"><div class="chip" style="background:#EDE9DF"></div><span class="name">Card</span><span class="hex">#EDE9DF</span></div>
+    <div class="sw"><div class="chip" style="background:#C8C3B8"></div><span class="name">Rule</span><span class="hex">#C8C3B8</span></div>
+    <div class="sw"><div class="chip" style="background:#999390"></div><span class="name">Mid</span><span class="hex">#999390</span></div>
+    <div class="sw"><div class="chip" style="background:#706B63"></div><span class="name">Off</span><span class="hex">#706B63</span></div>
+    <div class="sw"><div class="chip" style="background:#2A2A2A"></div><span class="name">Charcoal fg</span><span class="hex">#2A2A2A</span></div>
+  </div>
+</body>
+</html>

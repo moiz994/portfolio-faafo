@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Moiz Alam — Logo System</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png" media="(prefers-color-scheme: light)" />
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-dark-32.png" media="(prefers-color-scheme: dark)" />
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon-180.png" />
+  <link rel="stylesheet" href="colors_and_type.css" />
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: var(--font); background: var(--bg); color: var(--fg); -webkit-font-smoothing: antialiased; line-height: 1.6; }
+
+    /* ---- THE MARK ---- */
+    .logo-ma { font-family: var(--serif); font-weight: 500; letter-spacing: -0.14em; line-height: 1; color: var(--fg); display: inline-block; }
+    .logo-ast { font-family: var(--serif); font-weight: 400; line-height: 1; color: var(--fg); display: inline-block; }
+
+    .wrap { max-width: 1000px; margin: 0 auto; padding: 72px 56px 96px; }
+    .eyebrow { font-size: 0.72rem; font-weight: 500; text-transform: uppercase; letter-spacing: 2.5px; color: var(--mid); }
+    h1.title { font-family: var(--serif); font-size: clamp(2.4rem, 5vw, 3.6rem); font-weight: 400; letter-spacing: -1px; margin: 14px 0 10px; }
+    .lede { font-size: 1.02rem; font-weight: 300; color: var(--off); max-width: 560px; line-height: 1.75; }
+
+    /* hero specimen */
+    .hero-mark { margin: 56px 0; border: 1px solid var(--rule); border-radius: 14px; background: var(--card); height: 320px; display: flex; align-items: center; justify-content: center; }
+    .hero-mark .logo-ma { font-size: 11rem; }
+
+    .sec { padding: 44px 0; border-top: 1px solid var(--rule); }
+    .sec-label { font-size: 0.7rem; font-weight: 500; text-transform: uppercase; letter-spacing: 2px; color: var(--mid); margin-bottom: 26px; }
+    .sec-intro { font-size: 0.92rem; font-weight: 300; color: var(--off); max-width: 600px; line-height: 1.75; margin-bottom: 30px; }
+    .sec-intro em { color: var(--fg); font-style: normal; font-weight: 500; }
+
+    /* light / dark pair */
+    .pair { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .swatch { border: 1px solid var(--rule); border-radius: 12px; height: 200px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 18px; }
+    .swatch.light { background: #F9F5ED; }
+    .swatch.dark  { background: #2A2A2A; }
+    .swatch.light .logo-ma { color: #2A2A2A; font-size: 5rem; }
+    .swatch.dark  .logo-ma { color: #F9F5ED; font-size: 5rem; }
+    .swatch .tag { font-size: 0.62rem; font-weight: 500; text-transform: uppercase; letter-spacing: 1.6px; }
+    .swatch.light .tag { color: #888882; }
+    .swatch.dark  .tag { color: #555552; }
+
+    /* sizing scale */
+    .scale { display: flex; align-items: flex-end; gap: 48px; flex-wrap: wrap; }
+    .scale-item { display: flex; flex-direction: column; align-items: center; gap: 12px; }
+    .scale-item .v { font-size: 0.62rem; color: var(--mid); text-transform: uppercase; letter-spacing: 1px; }
+    .favicon { width: 32px; height: 32px; border: 1px solid var(--rule); border-radius: 6px; display: flex; align-items: center; justify-content: center; }
+    .favicon .logo-ma { font-size: 1.1rem; }
+
+    /* clear space */
+    .clearbox { display: inline-flex; padding: 48px; border: 1px dashed var(--rule); border-radius: 10px; position: relative; }
+    .clearbox .logo-ma { font-size: 4.5rem; outline: 1px solid rgba(168,74,63,0.35); outline-offset: 0; }
+    .clear-note { font-size: 0.78rem; font-weight: 300; color: var(--off); max-width: 360px; line-height: 1.7; }
+    .clear-row { display: flex; gap: 40px; align-items: center; flex-wrap: wrap; }
+
+    /* companion asterisk */
+    .companion { display: flex; gap: 44px; align-items: center; flex-wrap: wrap; }
+    .companion .glyph { width: 150px; height: 150px; border: 1px solid var(--rule); border-radius: 12px; background: var(--card); display: flex; align-items: center; justify-content: center; }
+    .companion .glyph .logo-ast { font-size: 4.5rem; }
+
+    /* do / don't */
+    .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .rule-card { border: 1px solid var(--rule); border-radius: 12px; padding: 22px 24px; }
+    .rule-card .mark-h { height: 92px; display: flex; align-items: center; justify-content: center; }
+    .rule-card .mark-h .logo-ma { font-size: 3.2rem; }
+    .rc-do .badge, .rc-dont .badge { font-size: 0.64rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1.4px; display: inline-flex; align-items: center; gap: 6px; }
+    .rc-do .badge { color: #3A6B4C; }
+    .rc-dont .badge { color: #A84A3F; }
+    .rule-card p { font-size: 0.8rem; font-weight: 300; color: var(--off); line-height: 1.6; margin-top: 10px; }
+    .dont-track { letter-spacing: 0.25em !important; }
+    .dont-sans  { font-family: var(--font) !important; font-weight: 700 !important; letter-spacing: 0.18em !important; }
+    .dont-color { color: #A84A3F !important; }
+    .dont-shadow{ text-shadow: 2px 3px 0 rgba(0,0,0,0.18); }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="eyebrow">Brand · Logo System</div>
+    <h1 class="title">The MA ligature</h1>
+    <p class="lede">A serif monogram set in EB Garamond, weight 500, with the two letters drawn tight so the M's stem and the A's leg nearly meet. It carries the portfolio's editorial voice straight into the mark.</p>
+
+    <div class="hero-mark"><span class="logo-ma">MA</span></div>
+
+    <section class="sec">
+      <div class="sec-label">Construction</div>
+      <p class="sec-intro">EB Garamond · <em>weight 500</em> · letter-spacing <em>−0.14em</em> · line-height 1. The negative tracking is the whole idea — it's what makes the pair read as one mark rather than two initials. Spacing is set in <em>em</em> so the overlap holds at every size.</p>
+    </section>
+
+    <section class="sec">
+      <div class="sec-label">Light & Dark</div>
+      <p class="sec-intro">Charcoal on cream, or cream on charcoal. The mark is monochrome only — it takes the foreground color of whatever surface it sits on. Never an accent color.</p>
+      <div class="pair">
+        <div class="swatch light"><span class="logo-ma">MA</span><span class="tag">Charcoal · #2A2A2A on cream</span></div>
+        <div class="swatch dark"><span class="logo-ma">MA</span><span class="tag">Cream · #F9F5ED on charcoal</span></div>
+      </div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-label">Sizing</div>
+      <p class="sec-intro">Scales from a 32px favicon up to full display. Below ~18px the ligature tightens further is unnecessary — let the favicon breathe a touch.</p>
+      <div class="scale">
+        <div class="scale-item"><div class="favicon"><span class="logo-ma">MA</span></div><span class="v">Favicon · 32</span></div>
+        <div class="scale-item"><span class="logo-ma" style="font-size:1.6rem">MA</span><span class="v">Nav · 22</span></div>
+        <div class="scale-item"><span class="logo-ma" style="font-size:3rem">MA</span><span class="v">Section · 40</span></div>
+        <div class="scale-item"><span class="logo-ma" style="font-size:5.5rem">MA</span><span class="v">Display · 96+</span></div>
+      </div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-label">Clear space</div>
+      <div class="clear-row">
+        <div class="clearbox"><span class="logo-ma">MA</span></div>
+        <p class="clear-note">Keep clear space of at least <strong>half the mark's height</strong> on every side. Nothing — type, rules, or image edges — should intrude into it.</p>
+      </div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-label">Companion symbol</div>
+      <p class="sec-intro">For spaces too small or too busy for the ligature, the <em>reference asterisk</em> stands in — the literary footnote mark, set in the same Garamond. Use it as a favicon alternate, a section divider, or a loading glyph.</p>
+      <div class="companion">
+        <div class="glyph"><span class="logo-ast">&#42;</span></div>
+        <p class="clear-note">Garamond asterisk · weight 400 · monochrome. A quiet, distinctive atom that belongs to the same family as the ligature.</p>
+      </div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-label">Do &amp; Don't</div>
+      <div class="grid2">
+        <div class="rule-card rc-do"><div class="mark-h"><span class="logo-ma">MA</span></div><span class="badge">✓ Do — keep it tight, serif, mono</span><p>Preserve the −0.14em overlap. Ink or bone only. Let it sit on flat paper or black.</p></div>
+        <div class="rule-card rc-dont"><div class="mark-h"><span class="logo-ma dont-track">MA</span></div><span class="badge">✕ Don't — track it out</span><p>Spacing the letters apart breaks the ligature and turns it back into two loose initials.</p></div>
+        <div class="rule-card rc-dont"><div class="mark-h"><span class="logo-ma dont-sans">MA</span></div><span class="badge">✕ Don't — use the sans</span><p>DM Sans is for UI, not the mark. The logo is always the serif.</p></div>
+        <div class="rule-card rc-dont"><div class="mark-h"><span class="logo-ma dont-color">MA</span></div><span class="badge">✕ Don't — recolor or add effects</span><p>No accent colors, gradients, outlines, or shadows. The brand is shadow-free.</p></div>
+      </div>
+    </section>
+  </div>
+</body>
+</html>

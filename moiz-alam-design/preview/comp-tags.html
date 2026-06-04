@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<link rel="stylesheet" href="../colors_and_type.css" />
+<link rel="stylesheet" href="card.css" />
+<style>
+  .tags { display: flex; gap: 8px; flex-wrap: wrap; }
+  .wtag { padding: 4px 11px; border-radius: 12px; font-size: 0.7rem; font-weight: 500; background: rgba(0,0,0,0.04); color: var(--mid); border: 1px solid var(--rule); }
+  .wtag.blue, .wtag.red, .wtag.yellow, .wtag.green { background: var(--accent-soft); color: var(--accent); border-color: var(--accent-line); }
+  .pills { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 16px; }
+  .pills span { font-size: 0.66rem; font-weight: 500; color: var(--mid); text-transform: uppercase; letter-spacing: 0.5px; }
+  .meta { font-size: 0.62rem; color: var(--mid); margin-top: 16px; }
+</style>
+</head>
+<body>
+  <div class="tags">
+    <span class="wtag blue">AI · B2B SaaS</span>
+    <span class="wtag red">Mobile · EdTech</span>
+    <span class="wtag yellow">Monetisation</span>
+    <span class="wtag green">Marketplace</span>
+    <span class="wtag">Arbisoft</span>
+  </div>
+  <div class="pills"><span>Prompt Engineering</span><span>MVP Definition</span><span>0 to 1</span></div>
+  <p class="meta">One accent for every category tag — distinction comes from the label, not the hue. Neutral chip (Arbisoft) for orgs. Footer pills: tracked-out uppercase, no fill.</p>
+</body>
+</html>

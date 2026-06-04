@@ -1,0 +1,178 @@
+/* ============================================================
+   MOIZ ALAM — PORTFOLIO DESIGN SYSTEM
+   colors_and_type.css
+   Editorial PM portfolio. Soft cream light mode + charcoal dark.
+   Foundations: EB Garamond (serif display) + DM Sans (sans UI/body).
+   v3 — synced to repo main (github.com/moiz994/portfolio-faafo):
+     · brand accent is now DENIM #5E83AE (was teal #459BB9)
+     · Denim stays FLAT in dark mode (no lift)
+     · red / yellow / green retained ONLY as rare functional/semantic
+       colors — categories still use labels, not hue
+     · softer cream/charcoal palette + image-forward work kept from v2
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap');
+
+/* ============================================================
+   1. COLOR — LIGHT (default)
+   ============================================================ */
+:root {
+  /* Surfaces & ink — soft cream paper, warm charcoal ink */
+  --bg:     #F9F5ED;   /* soft cream — the signature background  */
+  --fg:     #2A2A2A;   /* warm charcoal ink — soft, never #000   */
+  --off:    #706B63;   /* secondary text (body copy)             */
+  --mid:    #999390;   /* tertiary text, labels, eyebrows        */
+  --rule:   #C8C3B8;   /* hairline rules, borders, dividers      */
+  --card:   #EDE9DF;   /* raised card fill (1 step off bg)       */
+  --nav-bg: rgba(249,245,237,0.88);  /* frosted nav              */
+
+  /* Accent — ONE focused brand accent: DENIM #5E83AE (the slate-blue
+     from the brand palette; lives in the repo's styles.css as --blue).
+     Used on tags, links, the colored primary button, and small accent
+     moments. Category distinctions STILL happen through labels, not hue. */
+  --accent:      #5E83AE;
+  --accent-soft: rgba(94,131,174,0.10);  /* tag / chip fill        */
+  --accent-line: rgba(94,131,174,0.25);  /* tag / chip border      */
+  --accent-ink:  #F9F5ED;  /* text/icon color ON a solid accent fill */
+  --blue:        var(--accent);  /* repo alias — styles.css uses --blue */
+
+  /* Functional / semantic palette — RARE use only (status, the odd
+     data point). NOT for category coding; the brand stays monochrome.
+     Mirrors the four hues defined in the repo's styles.css. */
+  --red:    #C42B20;
+  --yellow: #9E7200;
+  --green:  #1A6B35;
+
+  /* Type families */
+  --serif:  'EB Garamond', Georgia, 'Times New Roman', serif;
+  --font:   'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+
+  /* Radius & motion */
+  --radius:    14px;   /* cards            */
+  --radius-pill: 28px; /* buttons          */
+  --ease:      cubic-bezier(0.34, 1.56, 0.64, 1); /* gentle overshoot */
+  --dur:       0.35s;  /* theme + color transitions */
+
+  /* Elevation — subtle. Cards rest flat; lift on hover. Image cards
+     use a protection gradient (see --overlay) for text legibility. */
+  --shadow-hover: 0 12px 32px rgba(0,0,0,0.07);
+  /* Image cards (full-bleed work covers, All Projects grid) carry a
+     deeper, darker hover lift than quiet cream cards — the heavier
+     shadow reads against photography. Keep --shadow-hover for content
+     cards; reach for --shadow-image only on full-bleed image cards. */
+  --shadow-image: 0 16px 40px rgba(0,0,0,0.18);
+  --overlay: linear-gradient(to top,
+              rgba(0,0,0,0.90) 0%, rgba(0,0,0,0.65) 40%,
+              rgba(0,0,0,0.15) 70%, transparent 100%);
+}
+
+/* ============================================================
+   2. COLOR — DARK (toggle via .dark on :root)
+   ============================================================ */
+:root.dark {
+  /* Charcoal, not true black — softer than v1 */
+  --bg:     #2A2A2A;
+  --fg:     #F9F5ED;
+  --off:    #8A8680;
+  --mid:    #5C5855;
+  --rule:   #3D3D3D;
+  --card:   #343434;
+  --nav-bg: rgba(42,42,42,0.88);
+
+  /* Denim stays FLAT in dark (no lift) — matches the repo. Reads as a
+     calmer accent on charcoal; cream ink still carries the button. */
+  --accent:      #5E83AE;
+  --accent-soft: rgba(94,131,174,0.16);
+  --accent-line: rgba(94,131,174,0.30);
+  --accent-ink:  #F9F5ED;
+  --blue:        var(--accent);
+
+  /* Functional palette — brightened for dark, still rare use only */
+  --red:    #E8655A;
+  --yellow: #D4A847;
+  --green:  #4CAF70;
+
+  --shadow-hover: 0 12px 32px rgba(0,0,0,0.35);
+  --shadow-image: 0 16px 40px rgba(0,0,0,0.45);
+}
+
+/* ============================================================
+   3. TYPE SCALE — semantic roles
+   Display & headings = serif. Everything functional = sans.
+   Sizes use clamp() so the editorial display flexes with viewport.
+   ============================================================ */
+
+/* Hero display — the big serif statement, italic mid-line for lilt */
+.t-display {
+  font-family: var(--serif);
+  font-size: clamp(3.2rem, 6.5vw, 7rem);
+  font-weight: 400;
+  line-height: 1.0;
+  letter-spacing: -2px;
+  color: var(--fg);
+}
+
+/* Section title — "Selected Work", "The Journey" */
+.t-title {
+  font-family: var(--serif);
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  font-weight: 400;
+  line-height: 1.1;
+  letter-spacing: -0.8px;
+  color: var(--fg);
+}
+
+/* Card / item heading */
+.t-heading {
+  font-family: var(--serif);
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 1.2;
+  letter-spacing: -0.2px;
+  color: var(--fg);
+}
+
+/* Serif numerals — hero stats & project metrics */
+.t-stat {
+  font-family: var(--serif);
+  font-size: 1.5rem;
+  font-weight: 400;
+  letter-spacing: -0.3px;
+  line-height: 1;
+  color: var(--fg);
+}
+
+/* Body copy — light weight, generous leading */
+.t-body {
+  font-family: var(--font);
+  font-size: 1.05rem;
+  font-weight: 300;
+  line-height: 1.75;
+  color: var(--off);
+}
+
+/* Default UI / smaller body */
+.t-ui {
+  font-family: var(--font);
+  font-size: 0.88rem;
+  font-weight: 300;
+  line-height: 1.65;
+  color: var(--off);
+}
+
+/* Eyebrow / label — uppercase, tracked out, tertiary */
+.t-eyebrow {
+  font-family: var(--font);
+  font-size: 0.72rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--mid);
+}
+
+/* Emphasis inside body: NOT italic — turns to solid ink + weight */
+.t-body em,
+.t-ui em { color: var(--fg); font-style: normal; font-weight: 500; }
+
+/* Italic is reserved for the serif display lilt only */
+.serif-italic { font-style: italic; color: var(--off); }

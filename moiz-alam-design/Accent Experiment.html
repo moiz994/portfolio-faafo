@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Accent — Denim #5E83AE</title>
+  <link rel="stylesheet" href="colors_and_type.css" />
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    :root { --accent: #5E83AE; --accent-soft: rgba(94,131,174,0.10); --accent-line: rgba(94,131,174,0.25); }
+    body { font-family: var(--font); background: var(--bg); color: var(--fg); -webkit-font-smoothing: antialiased; line-height: 1.6; }
+    .wrap { max-width: 1080px; margin: 0 auto; padding: 64px 56px 90px; }
+    .eyebrow { font-size: 0.72rem; font-weight: 500; text-transform: uppercase; letter-spacing: 2.5px; color: var(--mid); }
+    h1.title { font-family: var(--serif); font-size: clamp(2.2rem,5vw,3.4rem); font-weight: 400; letter-spacing: -1px; margin: 14px 0 10px; }
+    h1.title em { font-style: italic; color: var(--accent); }
+    .lede { font-size: 1rem; font-weight: 300; color: var(--off); max-width: 600px; line-height: 1.75; }
+
+    /* swatch header */
+    .chips { display: flex; gap: 14px; margin: 34px 0 8px; flex-wrap: wrap; }
+    .chip { display: flex; flex-direction: column; gap: 8px; }
+    .chip .box { width: 96px; height: 64px; border-radius: 10px; border: 1px solid var(--rule); }
+    .chip .n { font-size: 0.66rem; font-weight: 600; }
+    .chip .h { font-size: 0.62rem; color: var(--mid); font-variant-numeric: tabular-nums; }
+
+    .sec { padding: 40px 0; border-top: 1px solid var(--rule); }
+    .sec-label { font-size: 0.7rem; font-weight: 500; text-transform: uppercase; letter-spacing: 2px; color: var(--mid); margin-bottom: 24px; }
+
+    .row { display: flex; gap: 14px; flex-wrap: wrap; align-items: center; }
+
+    /* tags */
+    .wtag { padding: 4px 12px; border-radius: 12px; font-size: 0.72rem; font-weight: 500; white-space: nowrap; }
+    .wtag.accent { background: var(--accent-soft); color: var(--accent); border: 1px solid var(--accent-line); }
+    .wtag.solid  { background: var(--accent); color: #fff; }
+    .wtag.neutral{ background: rgba(0,0,0,0.04); color: var(--mid); border: 1px solid var(--rule); }
+
+    /* buttons */
+    .btn-ink { font-size:.85rem; font-weight:600; padding:12px 26px; border-radius:28px; background:var(--fg); color:var(--bg); border:none; }
+    .btn-accent { font-size:.85rem; font-weight:600; padding:12px 26px; border-radius:28px; background:var(--accent); color:#fff; border:none; }
+    .btn-accent-ghost { font-size:.85rem; font-weight:500; padding:12px 26px; border-radius:28px; background:none; color:var(--accent); border:1px solid var(--accent-line); }
+
+    /* links */
+    .link-demo { font-size: 1rem; font-weight: 300; color: var(--off); max-width: 580px; line-height: 1.85; }
+    .link-demo a { color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent-line); padding-bottom: 1px; }
+
+    /* mini work card with accent */
+    .cards { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .card { background: var(--card); border: 1px solid var(--rule); border-radius: 14px; padding: 24px; display: flex; flex-direction: column; gap: 14px; }
+    .card.lift { border-top: 3px solid var(--accent); }
+    .card-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 10px; }
+    .card-top .wtag { flex-shrink: 0; }
+    .card-num { font-size: 0.72rem; font-weight: 600; color: var(--rule); letter-spacing: 1px; }
+    .card h3 { font-family: var(--serif); font-size: 1.4rem; font-weight: 400; letter-spacing: -0.2px; }
+    .card p { font-size: 0.84rem; font-weight: 300; color: var(--off); line-height: 1.6; }
+    .card p em { color: var(--accent); font-style: normal; font-weight: 500; }
+    .card-foot { display:flex; justify-content:space-between; align-items:center; padding-top:13px; border-top:1px solid var(--rule); }
+    .card-link { font-size: 0.72rem; font-weight: 500; color: var(--accent); }
+
+    /* hero blob compare */
+    .blobs { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .blobpane { position: relative; height: 220px; border: 1px solid var(--rule); border-radius: 14px; overflow: hidden; display:flex; align-items:flex-end; justify-content:center; }
+    .blob { position: absolute; bottom: -30px; width: 150px; height: 70%; border-radius: 44% 56% 38% 62% / 52% 40% 60% 48%; }
+    .blob.cur { background: #C8D9F0; }
+    .blob.new { background: rgba(94,131,174,0.30); }
+    .blobpane img { position: relative; height: 92%; z-index: 1; }
+    .blobpane .cap { position:absolute; top:12px; left:14px; font-size:0.6rem; text-transform:uppercase; letter-spacing:1.4px; color:var(--mid); z-index:2; }
+
+    /* stats with accent numerals */
+    .stats { display:flex; gap:32px; align-items:center; flex-wrap:wrap; }
+    .stat { display:flex; flex-direction:column; gap:4px; }
+    .stat .v { font-family:var(--serif); font-size:2rem; font-weight:400; letter-spacing:-0.4px; line-height:1; }
+    .stat .v.acc { color: var(--accent); }
+    .stat .l { font-size:0.66rem; color:var(--mid); text-transform:uppercase; letter-spacing:0.8px; }
+    .div { width:1px; height:38px; background:var(--rule); }
+
+    /* dark band */
+    .dark-band { background:#2A2A2A; border-radius:16px; padding:40px 36px; margin-top:8px; }
+    .dark-band .sec-label { color:#5C5855; }
+    .dark-band .wtag.accent { background: rgba(94,131,174,0.16); color:#5E83AE; border-color: rgba(94,131,174,0.30); }
+    .dark-band .btn-accent { background:#5E83AE; color:#F9F5ED; }
+    .dark-band .btn-accent-ghost { color:#5E83AE; border-color: rgba(94,131,174,0.35); }
+    .dark-band .link-demo { color:#8A8680; }
+    .dark-band .link-demo a { color:#5E83AE; border-color: rgba(94,131,174,0.35); }
+    .dark-band .stat .v { color:#F0EEE9; } .dark-band .stat .v.acc { color:#5E83AE; }
+    .dark-band .stat .l { color:#5C5855; } .dark-band .div { background:#3D3D3D; }
+
+    .note { font-size: 0.8rem; font-weight: 300; color: var(--off); line-height: 1.7; max-width: 620px; margin-top: 14px; }
+    .note b { color: var(--fg); font-weight: 600; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="eyebrow">Brand · Accent</div>
+    <h1 class="title">A single Denim accent, <em>#5E83AE</em></h1>
+    <p class="lede">Denim #5E83AE is the one focused brand accent — replacing the four muted category colors. Shown the way the brand actually uses color: mostly as text on a faint fill, sparingly as a solid.</p>
+
+    <div class="chips">
+      <div class="chip"><div class="box" style="background:#5E83AE"></div><span class="n">Accent</span><span class="h">#5E83AE</span></div>
+      <div class="chip"><div class="box" style="background:rgba(94,131,174,0.10);border-color:rgba(94,131,174,0.25)"></div><span class="n">Soft fill</span><span class="h">10% α</span></div>
+      <div class="chip"><div class="box" style="background:#5E83AE"></div><span class="n">Dark · flat</span><span class="h">#5E83AE</span></div>
+    </div>
+
+    <section class="sec">
+      <div class="sec-label">Tags</div>
+      <div class="row">
+        <span class="wtag accent">AI · B2B SaaS</span>
+        <span class="wtag accent">Marketplace</span>
+        <span class="wtag neutral">Arbisoft</span>
+        <span class="wtag solid">Featured</span>
+      </div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-label">Buttons</div>
+      <div class="row">
+        <button class="btn-ink">See my work ↓</button>
+        <button class="btn-accent">Let's talk</button>
+        <button class="btn-accent-ghost">LinkedIn ↗</button>
+      </div>
+      <p class="note"><b>Decision:</b> the brand adopted a solid <b>Denim</b> primary button (see <em>styles.css</em>), with the accent also powering links and the secondary CTA. Used this sparingly, Denim reads as <em>considered</em> — not generic-SaaS.</p>
+    </section>
+
+    <section class="sec">
+      <div class="sec-label">Links &amp; emphasis in copy</div>
+      <p class="link-demo">8 years turning unclear problems into shipped products. Currently leading AI-native bets at <a href="#">Arbisoft</a>, where I shipped <a href="#">BenchPrep</a> to beta in 14 weeks. The accent gives running copy a quiet place to point.</p>
+    </section>
+
+    <section class="sec">
+      <div class="sec-label">Work cards — two accent treatments</div>
+      <div class="cards">
+        <div class="card lift">
+          <div class="card-top"><span class="card-num">01</span><span class="wtag accent">AI · B2B SaaS</span></div>
+          <h3>BenchPrep</h3>
+          <p>LLM interview platform. Shipped to beta in <em>14 weeks</em>.</p>
+          <div class="card-foot"><span class="card-num">Arbisoft</span><span class="card-link">Case study →</span></div>
+        </div>
+        <div class="card">
+          <div class="card-top"><span class="card-num">02</span><span class="wtag accent">Monetisation</span></div>
+          <h3>In-App Payments</h3>
+          <p>New revenue stream worth <em>$700K+</em> in year one.</p>
+          <div class="card-foot"><span class="card-num">edX.org</span><span class="card-link">Case study →</span></div>
+        </div>
+      </div>
+      <p class="note">Left card adds a 3px accent top-rule; right keeps the pure hairline. The top-rule is tasteful but verges on the "colored-border card" trope — I'd lean toward the plain version.</p>
+    </section>
+
+    <section class="sec">
+      <div class="sec-label">Hero blob — retired in v2</div>
+      <div class="blobs">
+        <div class="blobpane"><span class="cap">Current · #C8D9F0</span><div class="blob cur"></div><img src="assets/hero-illustration.png" alt="" /></div>
+        <div class="blobpane"><span class="cap">Denim · #5E83AE @ 30%</span><div class="blob new"></div><img src="assets/hero-illustration.png" alt="" /></div>
+      </div>
+      <p class="note">We explored tinting the hero with the accent. v2 ultimately <b>dropped the blob entirely</b> — the portrait now floats free on cream. Kept here only as a record of the exploration.</p>
+    </section>
+
+    <section class="sec">
+      <div class="sec-label">Stats — one accent numeral</div>
+      <div class="stats">
+        <div class="stat"><span class="v acc">8+</span><span class="l">Years</span></div>
+        <div class="div"></div>
+        <div class="stat"><span class="v">$700K+</span><span class="l">Revenue</span></div>
+        <div class="div"></div>
+        <div class="stat"><span class="v">14 wks</span><span class="l">0 to beta</span></div>
+        <div class="div"></div>
+        <div class="stat"><span class="v">200+</span><span class="l">Day-1 users</span></div>
+      </div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-label">On dark</div>
+      <div class="dark-band">
+        <div class="row" style="margin-bottom:22px">
+          <span class="wtag accent">AI · B2B SaaS</span>
+          <button class="btn-accent">Let's talk</button>
+          <button class="btn-accent-ghost">LinkedIn ↗</button>
+        </div>
+        <p class="link-demo" style="margin-bottom:22px">Leading AI-native bets at <a href="#">Arbisoft</a>. The accent stays flat at <strong style="color:#5E83AE;font-weight:500">#5E83AE</strong> on charcoal — no lift.</p>
+        <div class="stats">
+          <div class="stat"><span class="v acc">8+</span><span class="l">Years</span></div>
+          <div class="div"></div>
+          <div class="stat"><span class="v">$700K+</span><span class="l">Revenue</span></div>
+          <div class="div"></div>
+          <div class="stat"><span class="v">200+</span><span class="l">Day-1 users</span></div>
+        </div>
+      </div>
+    </section>
+  </div>
+</body>
+</html>

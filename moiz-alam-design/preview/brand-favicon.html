@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<link rel="stylesheet" href="../colors_and_type.css" />
+<link rel="stylesheet" href="card.css" />
+<style>
+  body { gap: 22px; }
+  .tabs { display: flex; align-items: flex-end; gap: 0; }
+  .tab { display: flex; align-items: center; gap: 8px; background: var(--card); border: 1px solid var(--rule); border-bottom: none; border-radius: 9px 9px 0 0; padding: 9px 14px; max-width: 200px; }
+  .tab.active { background: var(--bg); }
+  .tab img { width: 16px; height: 16px; border-radius: 3px; display: block; }
+  .tab span { font-size: 0.72rem; color: var(--off); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .tab .x { color: var(--mid); font-size: 0.8rem; margin-left: 2px; }
+  .barline { height: 1px; background: var(--rule); margin-top: -1px; }
+  .ladder { display: flex; align-items: flex-end; gap: 24px; margin-top: 4px; }
+  .li { display: flex; flex-direction: column; align-items: center; gap: 9px; }
+  .li img { display: block; border-radius: 5px; border: 1px solid var(--rule); }
+  .li .v { font-size: 0.6rem; color: var(--mid); text-transform: uppercase; letter-spacing: 1px; }
+  .li.dark img { border-color: #2a2a2a; }
+</style>
+</head>
+<body>
+  <div>
+    <div class="tabs">
+      <div class="tab active"><img src="../assets/favicon-32.png" alt="" /><span>Moiz Alam — Senior PM</span><span class="x">×</span></div>
+      <div class="tab"><img src="../assets/favicon-32.png" alt="" /><span>BenchPrep</span><span class="x">×</span></div>
+    </div>
+    <div class="barline"></div>
+  </div>
+  <div class="ladder">
+    <div class="li"><img src="../assets/favicon-16.png" width="16" height="16" alt="" /><span class="v">16</span></div>
+    <div class="li"><img src="../assets/favicon-32.png" width="32" height="32" alt="" /><span class="v">32</span></div>
+    <div class="li"><img src="../assets/favicon-512.png" width="56" height="56" alt="" /><span class="v">Touch · 180</span></div>
+    <div class="li dark"><img src="../assets/favicon-dark-32.png" width="32" height="32" alt="" /><span class="v">Dark · 32</span></div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<link rel="stylesheet" href="../colors_and_type.css" />
+<link rel="stylesheet" href="card.css" />
+<style>
+  .wrap { display: flex; align-items: center; gap: 36px; }
+  .toggle { display: flex; gap: 22px; align-items: center; }
+  .t { display: flex; flex-direction: column; align-items: center; gap: 8px; }
+  .pad { padding: 12px; border-radius: 8px; border: 1px solid var(--rule); background: var(--card); }
+  .light .pad { color: #888882; }
+  .dark-mode { background: #0B0B0B; }
+  .dark-mode .pad { background: #131313; border-color: #1E1E1E; color: #D4A847; }
+  .cap { font-size: 0.6rem; color: var(--mid); text-transform: uppercase; letter-spacing: 1px; }
+  .meta { font-size: 0.62rem; color: var(--mid); max-width: 280px; line-height: 1.55; }
+  svg { width: 22px; height: 22px; display: block; }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="toggle">
+      <div class="t light"><div class="pad"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5" fill="currentColor" stroke="none"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="5.64" y1="5.64" x2="4.22" y2="4.22"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/><line x1="5.64" y1="18.36" x2="4.22" y2="19.78"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/></svg></div><span class="cap">Light</span></div>
+      <div class="t dark-mode"><div class="pad"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" fill="currentColor" stroke="none"/></svg></div><span class="cap">Dark</span></div>
+    </div>
+    <p class="meta">The only two icons in the system. Line style, 2px round caps. Toggle springs (overshoot ease) &amp; persists to localStorage.</p>
+  </div>
+</body>
+</html>

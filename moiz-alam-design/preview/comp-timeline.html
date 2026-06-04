@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<link rel="stylesheet" href="../colors_and_type.css" />
+<link rel="stylesheet" href="card.css" />
+<style>
+  .journey-item { display: grid; grid-template-columns: 120px 1fr; gap: 28px; padding: 20px 0; border-top: 1px solid var(--rule); }
+  .journey-item:last-child { border-bottom: 1px solid var(--rule); }
+  .year { font-size: 0.74rem; color: var(--mid); text-transform: uppercase; letter-spacing: 0.8px; padding-top: 4px; }
+  .role-line { display: flex; align-items: center; gap: 12px; margin-bottom: 6px; }
+  .role-line h3 { font-family: var(--serif); font-size: 1.15rem; font-weight: 400; letter-spacing: -0.2px; }
+  .co { font-size: 0.64rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1.2px; padding: 3px 10px; border-radius: 10px; }
+  .co.blue { background: var(--accent-soft); color: var(--accent); }
+  .co.red  { background: var(--accent-soft); color: var(--accent); }
+  .desc { font-size: 0.82rem; color: var(--off); line-height: 1.6; font-weight: 300; max-width: 460px; }
+</style>
+</head>
+<body>
+  <div class="journey-item">
+    <span class="year">2025 – Now</span>
+    <div><div class="role-line"><h3>Senior Product Manager</h3><span class="co blue">Arbisoft</span></div><p class="desc">Leading AI-native product bets. Ran the company's first Product Bootcamp.</p></div>
+  </div>
+  <div class="journey-item">
+    <span class="year">2022 – 2025</span>
+    <div><div class="role-line"><h3>Product Manager</h3><span class="co red">Arbisoft · edX</span></div><p class="desc">Led the full edX mobile rewrite and launched in-app payments.</p></div>
+  </div>
+</body>
+</html>

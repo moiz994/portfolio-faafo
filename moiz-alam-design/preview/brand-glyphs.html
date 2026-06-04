@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<link rel="stylesheet" href="../colors_and_type.css" />
+<link rel="stylesheet" href="card.css" />
+<style>
+  .glyphs { display: flex; gap: 26px; flex-wrap: wrap; }
+  .g { display: flex; flex-direction: column; align-items: center; gap: 8px; }
+  .sym { font-size: 1.7rem; color: var(--fg); font-family: var(--font); }
+  .use { font-size: 0.6rem; color: var(--mid); text-transform: uppercase; letter-spacing: 0.8px; }
+  .meta { font-size: 0.62rem; color: var(--mid); margin-top: 18px; line-height: 1.5; }
+</style>
+</head>
+<body>
+  <div class="glyphs">
+    <div class="g"><span class="sym">↓</span><span class="use">Scroll / DL</span></div>
+    <div class="g"><span class="sym">↗</span><span class="use">External</span></div>
+    <div class="g"><span class="sym">→</span><span class="use">Next</span></div>
+    <div class="g"><span class="sym">·</span><span class="use">Separator</span></div>
+  </div>
+  <p class="meta">Unicode glyphs — not icons — carry directional &amp; affordance meaning. Typed inline, inherit text color. No emoji anywhere.</p>
+</body>
+</html>

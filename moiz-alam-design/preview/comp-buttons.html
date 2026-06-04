@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<link rel="stylesheet" href="../colors_and_type.css" />
+<link rel="stylesheet" href="card.css" />
+<style>
+  .btns { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; }
+  .btn-primary { font-size: 0.85rem; font-weight: 600; padding: 12px 26px; border-radius: 28px; background: var(--accent); color: var(--accent-ink); }
+  .btn-secondary, .btn-ghost { font-size: 0.85rem; font-weight: 500; padding: 12px 26px; border-radius: 28px; border: 1px solid var(--rule); color: var(--off); }
+  .nav-resume { font-size: 0.78rem; font-weight: 600; color: var(--fg); background: var(--card); border: 1px solid var(--rule); padding: 6px 14px; border-radius: 20px; }
+  .meta { font-size: 0.62rem; color: var(--mid); margin-top: 18px; }
+  .meta b { font-weight: 600; }
+</style>
+</head>
+<body>
+  <div class="btns">
+    <span class="btn-primary">See my work ↓</span>
+    <span class="btn-secondary">Resume ↓</span>
+    <span class="btn-ghost">LinkedIn ↗</span>
+    <span class="nav-resume">Resume ↓</span>
+  </div>
+  <p class="meta">Pill buttons (28px). Primary = solid <b style="color:var(--accent)">Denim accent</b> fill. Secondary/ghost = hairline outline. The nav résumé is a small card-fill pill.</p>
+</body>
+</html>

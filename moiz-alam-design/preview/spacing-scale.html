@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<link rel="stylesheet" href="../colors_and_type.css" />
+<link rel="stylesheet" href="card.css" />
+<style>
+  .scale { display: flex; align-items: flex-end; gap: 14px; }
+  .u { background: var(--blob); border-radius: 4px; }
+  .item { display: flex; flex-direction: column; gap: 8px; align-items: center; }
+  .v { font-size: 0.6rem; color: var(--mid); }
+  .note { font-size: 0.62rem; color: var(--mid); margin-top: 18px; line-height: 1.5; }
+</style>
+</head>
+<body>
+  <div class="scale">
+    <div class="item"><div class="u" style="width:14px;height:14px"></div><span class="v">14</span></div>
+    <div class="item"><div class="u" style="width:26px;height:26px"></div><span class="v">26</span></div>
+    <div class="item"><div class="u" style="width:36px;height:36px"></div><span class="v">36</span></div>
+    <div class="item"><div class="u" style="width:48px;height:48px"></div><span class="v">48</span></div>
+    <div class="item"><div class="u" style="width:64px;height:64px"></div><span class="v">64</span></div>
+    <div class="item"><div class="u" style="width:96px;height:96px"></div><span class="v">96</span></div>
+  </div>
+  <p class="note">Card gutters 14px · card padding 26px · row padding 32–40px · section padding 96px desktop. Centered column max-width ~1100px.</p>
+</body>
+</html>

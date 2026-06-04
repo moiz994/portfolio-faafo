@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<link rel="stylesheet" href="../colors_and_type.css" />
+<link rel="stylesheet" href="card.css" />
+<style>
+  body { gap: 18px; }
+  .top { display: flex; align-items: stretch; gap: 14px; }
+  .big { flex: 1; border-radius: 12px; background: var(--accent); display: flex; align-items: flex-end; padding: 12px; min-height: 88px; }
+  .big .h { font-size: 0.72rem; font-weight: 600; color: #fff; font-variant-numeric: tabular-nums; }
+  .side { display: flex; flex-direction: column; gap: 10px; width: 230px; }
+  .usage { display: flex; align-items: center; gap: 10px; }
+  .wtag { padding: 4px 11px; border-radius: 12px; font-size: 0.7rem; font-weight: 500; background: var(--accent-soft); color: var(--accent); border: 1px solid var(--accent-line); }
+  .lnk { font-size: 0.82rem; color: var(--off); }
+  .lnk a { color: var(--accent); border-bottom: 1px solid var(--accent-line); text-decoration: none; padding-bottom: 1px; }
+  .ucap { font-size: 0.6rem; color: var(--mid); text-transform: uppercase; letter-spacing: 1px; }
+  .note { font-size: 0.62rem; color: var(--mid); line-height: 1.5; }
+  .note b { color: var(--fg); font-weight: 600; }
+  .swrow { display: flex; gap: 8px; }
+  .dot { display: flex; flex-direction: column; gap: 5px; }
+  .dot .c { width: 100%; height: 30px; border-radius: 7px; border: 1px solid var(--rule); }
+  .dot .l { font-size: 0.55rem; color: var(--mid); text-align: center; font-variant-numeric: tabular-nums; }
+</style>
+</head>
+<body>
+  <div class="top">
+    <div class="big"><span class="h">#5E83AE · Denim · the one accent</span></div>
+    <div class="side">
+      <div class="usage"><span class="wtag">AI · B2B SaaS</span><span class="ucap">tag</span></div>
+      <div class="usage"><span class="lnk">shipped <a href="#">BenchPrep</a></span><span class="ucap">link</span></div>
+      <div class="swrow">
+        <div class="dot"><div class="c" style="background:var(--accent-soft)"></div><span class="l">10% fill</span></div>
+        <div class="dot"><div class="c" style="background:var(--accent-line)"></div><span class="l">25% line</span></div>
+        <div class="dot"><div class="c" style="background:#5E83AE"></div><span class="l">dark · flat</span></div>
+      </div>
+    </div>
+  </div>
+  <p class="note"><b>One focused accent — Denim #5E83AE.</b> Solid Denim powers the primary button &amp; hero italic line; elsewhere it's mostly text on a faint fill. Category meaning comes from the <b>label</b>, not the hue — red/yellow/green survive only as rare functional colors.</p>
+</body>
+</html>
