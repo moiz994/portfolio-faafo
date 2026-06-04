@@ -1,23 +1,22 @@
 /* Project detail page styles — layered on top of ../styles.css */
 
-.nav-back {
+.proj-back {
   display: inline-flex;
   align-items: center;
   gap: 6px;
   font-size: 0.82rem;
   font-weight: 400;
-  color: var(--off);
+  color: var(--mid);
+  margin-bottom: 28px;
   transition: color 0.2s !important;
   letter-spacing: 0.2px;
 }
-.nav-back:hover { color: var(--fg); }
+.proj-back:hover { color: var(--fg); }
 
 /* ===== PROJECT HERO ===== */
 .proj-hero {
-  min-height: 44vh;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
   padding: 120px 56px 64px;
   border-bottom: 1px solid var(--rule);
 }

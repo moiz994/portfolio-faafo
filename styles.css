@@ -978,7 +978,7 @@ em { font-style: italic; }
   .nav-links li:not(:last-child) { display: none; }
   .nav-right { gap: 12px; }
 
-  .hero { padding: 0 20px 56px; }
+  .hero { padding: 0 20px 56px; height: calc(100svh - 60px); min-height: unset; max-height: unset; justify-content: flex-end; }
   .hero-layout { grid-template-columns: 1fr; }
   .hero-visual { display: none; }
   .hero-inner { max-width: 100%; }
