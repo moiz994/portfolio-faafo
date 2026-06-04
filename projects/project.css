@@ -1,6 +1,9 @@
 /* Project detail page styles — layered on top of ../styles.css */
 
 .nav-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
   font-size: 0.82rem;
   font-weight: 400;
   color: var(--off);
