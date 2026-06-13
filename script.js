@@ -32,6 +32,19 @@
   updateBtns();
 })();
 
+// Personal expanding panels
+(function () {
+  const panels = document.querySelectorAll('#personalPanels .pp-panel');
+  if (!panels.length) return;
+  const activate = (panel) =>
+    panels.forEach(p => p.classList.toggle('is-active', p === panel));
+  panels.forEach(panel => {
+    panel.addEventListener('mouseenter', () => activate(panel));
+    panel.addEventListener('click', () => activate(panel));
+    panel.addEventListener('focus', () => activate(panel));
+  });
+})();
+
 // Scroll reveal
 const observer = new IntersectionObserver(
   (entries) => entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); }),
